@@ -430,11 +430,12 @@ td,
 th {
   padding: 0;
 }
-header	{
+.st-header	{
 	background: #0099cc;
 	color: #fff;
+	text-align: center;
 }
-header h1	{
+.st-header h1	{
 	margin: 0 auto;
 	padding-top: 1em;
 	padding-bottom: 0.3em;
@@ -446,85 +447,145 @@ header span	{
 	display: block;
 	width:200px;
 	margin: 0 auto;
-	padding-left: 3em;
 	font-family: 'Open Sans Condensed', sans-serif;
 	
+	
 }
-nav	{
-	width:300px;
+.st-header nav	{
 	margin: 0 auto;
-	padding-right: 8px;
-	font-size: 0.8em;
+	padding: 0.6em;
 }
-nav ul	{
-	margin: 1em auto;
+.st-header nav ul	{
+	margin: 0 auto;
 }
-nav ul li	{
+.st-header nav  li	{
 	display: inline;
-	padding: 10px;
+	padding-left: 1.3em;
 }
-nav ul a	{
+.st-header nav  a	{
+
 	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+	color: #fff;
 	text-decoration: none;
+	font-size: 1em;
 }
-#st-search-wrap	{
+.st-search	{
 	position: relative;
 	width: 280px;
 	margin: 0 auto;
-	padding-bottom: 1em;
-}
-#st-search	{
-	position: relative;
-	width: 240px;
-	height: 26px;
-	margin: 0 auto;
-}
-form	{
-	width: 320px;
-	margin: 0 auto;
+	overflow: hidden;
 }
 
-form label	{
-	position: absolute;
-	top: 0;
-	width: 45px;
-	height: 32px;
-	background-color: #237dac;
-	text-align: center;
-	line-height: 32px;
-}
-form input	{
+#st-search	{
+	width: 240px;
+	height: 30px;
 	color: grey;
 	border: 1px solid green;
-	font-size: 0.8em;
+	font-size: 1em;
 }
-form span	{
+.st-header-right span,input[type="submit"]	{
 	position: absolute;
-	top: 0;
+	top: 1px;
+	right: 20px;
 	width:30px;
 	padding-left: 0;
 	padding-top: 7px;
-	height: 24px;
+	height: 25px;
 	background-color: #237dac;
 	text-align: center;
+	z-index: 1;
 }
-.scroll-icon {
+input[type="submit"]	{
+	padding: 0;
+	outline: none;
+	border: none;
+	background: transparent;
+	z-index: 100;
+}
+.share-icon {
 	width: 280px;
 	margin: 0 auto;
-	padding: 5px 0 15px 0;
+	padding: 0 0 10px 20px;
+	overflow: hidden;
 }
-.scroll-icon a	{
+.share-icon li	{
+	float: left;
+	list-style: none;
+}
+.share-icon a	{
 	width: 30px;
 	padding: 8px;
 	color: #fff;
 	text-decoration: none;
 }
-.scroll-icon:last-child	{
-	padding-right: 0;
+.show-me img	{
+	float: left;
+	width: 120px;
+	padding-right: .8em;
+	padding-bottom: .8em;
 }
+/* media query: 960px for PC*/
+@media all and (min-width: 400px) {
+	form	{
+		display: none;
+}
+}
+
+/*media query: 1200px for big screen*/
+@media all and (min-width: 960px) {
+	header	{
+		overflow: hidden;
+		padding: 30px;
+	}
+	.top-logo	{
+		float: left;
+		width: 15%;
+		margin-top: -10px;
+		padding: 0;
+		font-size: 1em;
+	}
+	.top-logo h1,span	{
+		display: inline-block;
+		padding: 0;
+	}
+	nav	{
+		float: left;
+		width: 45%;
+		font-size: 1.2em;
+	}
+	.share-icon	{
+		float: left;
+		margin: 0;
+		padding: 0.8em;
+	}
+	.main-content	{
+		float: left;
+		width: 70%;
+		border: 1px solid green;
+	}
+	.st-side-content	{
+		margin: 0;
+		overflow: hidden;
+		float: left;
+		font-size: 1em;
+		border: 1px dashed yellowgreen;
+		text-align: center;
+}
+	.show-me img	{
+		float: none;
+	}
+	.goals	{
+		font-size: 0.8em;
+		
+	}
+
+
+
+}
+/*media query finish here*/
+
 .st-content	{
 	max-width: 960px;
-	margin: 0 auto;
 	padding: 20px;
 	background-color: #fff;
 }
@@ -542,15 +603,59 @@ form span	{
 .st-content .index-content	{
 	padding-left: 10px;
 }
+.st-side-content	{
+	margin-top: 2em;
+}
+.side-inner	{
+	padding: 10px;
+	margin: 0 auto;
+	border: 1px solid green;
+	overflow: hidden;
+}
 .st-footer {
+
 	position: relative;
 	bottom: 0;
 	padding: 40px 0;
 	width: 100%;
-	height: 150px;
+	height: 60px;
 	background-color: #30abd5;
 }
 
+/* main-content-layout*/
+.content	{
+	margin: 0 auto;
+	max-width: 1200px;
+	overflow: hidden;
+	border: 1px solid green;
+}
+.main-content	{
+	margin: 0  auto;
+	padding: 0;
+	width: 100%;
+	max-width: 960px;
+	color: #000;
+	background-color: #e0e4cc;
+}
+.main-content h1 {
+	text-align: center;
+	padding-top: 1em;
+}
+.index-inner-wrap	{
+	position: absolute;
+	bottom: 150px;	
+	right: 0;
+	margin: .8em;
+	padding: 1em;
+	border-left: 1px solid yellowgreen;
+	border-bottom: 1px solid yellowgreen;
+}
+.index-inner-wrap li,.goals li	{
+	text-decoration: none;
+	list-style: none;
+}
+.goals	{
+}
 
 
 
