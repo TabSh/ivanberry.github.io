@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # st-blog-M
 Mobile First design of my blog
 1.之前有设计一款，但是觉得不是很满意，重新推翻来一遍，一为好看点，二为
@@ -8,3 +9,6 @@ To do List:
 	3.media query 的设计准备
 	4.3的实现。
 （Deadline: This weekends)
+=======
+# ivanberry.github.io
+>>>>>>> eb019d74af524d7b7b7f04bfe37c99852d9117a4
