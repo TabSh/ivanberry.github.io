@@ -430,12 +430,12 @@ td,
 th {
   padding: 0;
 }
-.st-header	{
+.st-header {
 	background: #0099cc;
 	color: #fff;
 	text-align: center;
 }
-.st-header h1	{
+.st-header h1 {
 	margin: 0 auto;
 	padding-top: 1em;
 	padding-bottom: 0.3em;
@@ -443,7 +443,7 @@ th {
 	font-family: 'Shadows Into Light',cursive;
 
 }
-header span	{
+header span {
 	display: block;
 	width:200px;
 	margin: 0 auto;
@@ -451,39 +451,41 @@ header span	{
 	
 	
 }
-.st-header nav	{
+.st-header nav {
 	margin: 0 auto;
 	padding: 0.6em;
 }
-.st-header nav ul	{
+.st-header nav ul {
 	margin: 0 auto;
 }
-.st-header nav  li	{
+.st-header nav  li {
 	display: inline;
 	padding-left: 1.3em;
 }
-.st-header nav  a	{
+.st-header nav  a {
 
 	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
 	color: #fff;
 	text-decoration: none;
 	font-size: 1em;
+	display: inline;
+	padding: 0;
 }
-.st-search	{
+.st-search {
 	position: relative;
 	width: 280px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
-#st-search	{
+#st-search {
 	width: 240px;
 	height: 30px;
 	color: grey;
 	border: 1px solid green;
 	font-size: 1em;
 }
-.st-header-right span,input[type="submit"]	{
+.st-header-right span,input[type="submit"] {
 	position: absolute;
 	top: 1px;
 	right: 20px;
@@ -495,7 +497,7 @@ header span	{
 	text-align: center;
 	z-index: 1;
 }
-input[type="submit"]	{
+input[type="submit"] {
 	padding: 0;
 	outline: none;
 	border: none;
@@ -508,17 +510,17 @@ input[type="submit"]	{
 	padding: 0 0 10px 20px;
 	overflow: hidden;
 }
-.share-icon li	{
+.share-icon li {
 	float: left;
 	list-style: none;
 }
-.share-icon a	{
+.share-icon a {
 	width: 30px;
 	padding: 8px;
 	color: #fff;
 	text-decoration: none;
 }
-.show-me img	{
+.show-me img {
 	float: left;
 	width: 120px;
 	padding-right: .8em;
@@ -526,39 +528,39 @@ input[type="submit"]	{
 }
 /* media query: 960px for PC*/
 @media all and (min-width: 400px) {
-	form	{
+	form {
 		display: none;
 }
 }
 
 /*media query: 1200px for big screen*/
 @media all and (min-width: 960px) {
-	header	{
+	header {
 		overflow: hidden;
 		padding: 30px;
 	}
-	.top-logo	{
+	.top-logo {
 		float: left;
 		width: 15%;
 		margin-top: -10px;
 		padding: 0;
 		font-size: 1em;
 	}
-	.top-logo h1,span	{
+	.top-logo h1,span {
 		display: inline-block;
 		padding: 0;
 	}
-	nav	{
+	nav {
 		float: left;
 		width: 45%;
 		font-size: 1.2em;
 	}
-	.share-icon	{
+	.share-icon {
 		float: left;
 		margin: 0;
 		padding: 0.8em;
 	}
-	.main-content	{
+	/*.main-content {
 		float: left;
 		width: 70%;
 		border: 1px solid green;
@@ -577,36 +579,41 @@ input[type="submit"]	{
 	.goals	{
 		font-size: 0.8em;
 		
-	}
+	}*/
 
 
 
 }
 /*media query finish here*/
 
-.st-content	{
-	max-width: 960px;
+.st-content {
+	max-width: 1200px;
 	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #fff;
 }
-.st-content article	{
+.st-content article {
 	border: 1px dotted green;
 	overflow: hidden;
 	margin-bottom: 50px;
 	padding: 10px;
 	
 }
-.st-content .img-thumbs	{
+.st-content .img-thumbs {
 	float: left;
 	padding: 0 10px;
 }
-.st-content .index-content	{
+.st-content .index-content {
 	padding-left: 10px;
 }
-.st-side-content	{
-	margin-top: 2em;
+.st-side-content {
+	margin-left: auto;
+	margin-right:auto;
+	padding: 20px;
+	background-color: #fff;
 }
-.side-inner	{
+.side-inner {
 	padding: 10px;
 	margin: 0 auto;
 	border: 1px solid green;
@@ -623,69 +630,12 @@ input[type="submit"]	{
 }
 
 /* main-content-layout*/
-.content	{
-	margin: 0 auto;
-	max-width: 1200px;
-	overflow: hidden;
+.main-content {
+	border: 1px dashed red;
+}
+.side-content {
+	display: inline-block;
 	border: 1px solid green;
 }
-.main-content	{
-	margin: 0  auto;
-	padding: 0;
-	width: 100%;
-	max-width: 960px;
-	color: #000;
-	background-color: #e0e4cc;
-}
-.main-content h1 {
-	text-align: center;
-	padding-top: 1em;
-}
-.index-inner-wrap	{
-	position: absolute;
-	bottom: 150px;	
-	right: 0;
-	margin: .8em;
-	padding: 1em;
-	border-left: 1px solid yellowgreen;
-	border-bottom: 1px solid yellowgreen;
-}
-.index-inner-wrap li,.goals li	{
-	text-decoration: none;
-	list-style: none;
-}
-.goals	{
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
