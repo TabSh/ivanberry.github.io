@@ -599,6 +599,7 @@ input[type="submit"] {
 	padding-left: 10px;
 }
 .st-side-content {
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right:auto;
 	padding: 20px;
@@ -631,8 +632,10 @@ input[type="submit"] {
 
 /* main-content-layout*/
 .main-content {
-	border: 1px dashed red;
 	box-shadow: 5px 5px 80px green;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-bottom: 5em;
 }
 .side-content {
 	border: 1px solid green;
