@@ -19,6 +19,7 @@ html {
 body {
   margin: 0;
   background-color: #f1f4f9;
+  font-size: 110%;
 
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure {
@@ -543,7 +544,7 @@ input[type="submit"] {
 }
 }
 
-/*media query: 1200px for big screen*/
+/*media query: 960px for big screen*/
 @media all and (min-width: 960px) {
 	header {
 		overflow: hidden;
@@ -570,16 +571,27 @@ input[type="submit"] {
 		margin: 0;
 		padding: 0.8em;
 	}
+	.st-header {
+		max-width: 100%;
+		padding:0.8em 1.5em 0 1.5em;
+	}
+	.main-content, .st-content {
+	    box-shadow: 5px 5px 80px green;
+	    padding-left: 3em;
+	    padding-right: 3em;
+	    padding-bottom: 5em;
+		max-width: 960px;
+	}
 
-
-
+	
+	
+	
+	
 
 }
 /*media query finish here*/
 
 .st-content {
-	max-width: 1200px;
-	padding: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #fff;
@@ -589,7 +601,9 @@ input[type="submit"] {
 	overflow: hidden;
 	margin-bottom: 50px;
 	padding: 10px;
-	
+}
+article:first-child {
+	padding-top: 1.5em;
 }
 .st-content .img-thumbs {
 	float: left;
@@ -602,7 +616,6 @@ input[type="submit"] {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right:auto;
-	padding: 20px;
 	background-color: #fff;
 }
 .side-inner {
@@ -632,10 +645,10 @@ input[type="submit"] {
 
 /* main-content-layout*/
 .main-content {
-	box-shadow: 5px 5px 80px green;
-	padding-left: 3em;
-	padding-right: 3em;
-	padding-bottom: 5em;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 .5em;
 }
 .side-content {
 	border: 1px solid green;
@@ -645,6 +658,7 @@ input[type="submit"] {
 .main-content h2 {
 	margin-top: 0.8em;
 	text-align: center;
+
 }
 .main-content ul li {
 	display: inline;
@@ -652,12 +666,9 @@ input[type="submit"] {
 }
 
 
-p,h3 {
+p,h3, .st-goals-dream, .fa-ul {
 	padding-top: 1em;
 }
 p {
 	text-indent: 1em;
 }
-
-
-
