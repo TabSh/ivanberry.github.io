@@ -575,7 +575,7 @@ input[type="submit"] {
 		max-width: 100%;
 		padding:0.8em 1.5em 0 1.5em;
 	}
-	.main-content, .st-content {
+	.main-content {
 	    box-shadow: 5px 5px 80px green;
 	    padding-left: 3em;
 	    padding-right: 3em;
@@ -596,6 +596,11 @@ input[type="submit"] {
 	margin-right: auto;
 	background-color: #fff;
 }
+.st-main {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .st-content article {
 	border: 1px dotted green;
 	overflow: hidden;
@@ -613,7 +618,7 @@ article:first-child {
 	padding-left: 10px;
 }
 .st-side-content {
-	max-width: 1200px;
+	max-width: 960px;
 	margin-left: auto;
 	margin-right:auto;
 	background-color: #fff;
@@ -646,8 +651,8 @@ article:first-child {
 /* main-content-layout*/
 .main-content {
 	max-width: 960px;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 	padding: 0 .5em;
 }
 .side-content {
