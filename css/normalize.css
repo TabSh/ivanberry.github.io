@@ -653,7 +653,7 @@ article:first-child {
 	max-width: 960px;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 0 .5em;
+	padding: 0 1em;
 }
 .side-content {
 	border: 1px solid green;
@@ -665,9 +665,9 @@ article:first-child {
 	text-align: center;
 
 }
-.main-content ul li {
-	display: inline;
+.st-goals ul li {
 	list-style-type: none;
+	font-size: 0.8em;
 }
 
 
@@ -677,3 +677,46 @@ p,h3, .st-goals-dream, .fa-ul {
 p {
 	text-indent: 1em;
 }
+#selectorType {
+	list-style: disc;
+	padding-left: 40px;
+}
+#selectorType li {
+	margin-bottom: 6px;
+}
+#selectorType ul {
+	padding-left: 40px;
+}
+pre {
+	color: red;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 1.5em;
+}
+.img-responsive {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
+.dl {
+	margin-top: 1em;
+}
+.table-responsive {
+	line-height: 1.5;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	width: 100%;
+}
+.table-responsive tr td {
+	padding-left: 1em;
+}
+.reference {
+	margin-top: 1em;
+	font-size: .8em;
+	font-weight: 200;
+}
+.reference li {
+	list-style: circle;
+}
+
