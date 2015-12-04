@@ -18,7 +18,6 @@ html {
 
 body {
   margin: 0;
-  background-color: #f1f4f9;
   font-size: 110%;
 
 }
@@ -592,26 +591,44 @@ input[type="submit"] {
 /*media query finish here*/
 
 .st-content {
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #fff;
+    background: url(../img/bg.jpg) repeat;
 }
 .st-main {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: transparent;
+	padding: .5em 2em;
 }
 .st-content article {
 	border: 1px dotted green;
 	overflow: hidden;
+	margin-top: 1.2em;
 	margin-bottom: 50px;
 	padding: 10px;
+	background-color: #fff;
+	overflow: hidden;
 }
 article:first-child {
 	padding-top: 1.5em;
 }
+article h3 {
+	border-bottom: 1px dashed blue;
+}
+article ul {
+	margin-top: 1em;
+	padding-left: 50px;
+}
+article ul li {
+	font-size: small;
+	display: list-item;
+	padding-bottom: .4em;
+}
 .st-content .img-thumbs {
-	float: left;
+	display: inline-block;
 	padding: 0 10px;
 }
 .st-content .index-content {
@@ -626,7 +643,7 @@ article:first-child {
 .side-inner {
 	padding: 10px;
 	margin: 0 auto;
-	border: 1px solid green;
+	border-bottom: 1px dashed green;
 	overflow: hidden;
 }
 .st-footer {

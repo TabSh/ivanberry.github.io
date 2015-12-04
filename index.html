@@ -12,7 +12,8 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
@@ -27,7 +28,7 @@
 		<div class="st-header">
 			<header class="header">
 				<div class="top-logo">
-				<h1>Tab Gre</h1>
+				<h1 class="animated flash">Tab Gre</h1>
 				<span>Step forward forever</span>
 			</div>
 				<nav>
@@ -35,7 +36,7 @@
 						<li><a href="#">主页</a></li>
 						<li><a href="content/2015/work-env-setting.html">前端学习</a></li>
 						<li><a href="content/translation/translation.html">译文参考</a></li>
-						<li><a href="contact.html">关于我</a></li>
+						<li><a class="" href="contact.html">关于我</a></li>
 						
 					</ul>
 				</nav>
@@ -67,17 +68,25 @@
 					<div class="st-main">
 						<!-- the main content of the index-->
 
-						<section>
-							<article>
-								<div class="img-thumbs"><a href="content/2015/work-env-setting.html"><img src="img/work-env-setting.png" alt="我的工具箱"></a></div>
+						<section class="container">
+							<div class="row">
+							<article class="col-sm-4">
+								<div class="img-thumbs"><a href="content/2015/work-env-setting.html"><img src="img/test.jpg" alt="我的工具箱"></a></div>
 								<div class="index-content">
 									<h3>
 										<a href="content/2015/work-env-setting.html">开发环境的设置</a></h3>
 									<time><small>2015-11-15</small></time>
 									<span><small>作者:Tab</small></span>
+									<ul>
+										<li>系统环境</li>
+										<li>Vim</li>
+										<li>编码工具及辅助插件</li>
+										<li>同步测试</li>
+										<li>舒服的工作环境</li>
+									</ul>
 								</div>
 							</article>
-							<article>
+							<article class="col-sm-4 col-sm-offset-1">
 								<div class="img-thumbs"><a href=""><img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2015/11/RainEffects-105x105.jpg" alt="测试图片"></a></div>
 								<div class="index-content">
 									<h3>
@@ -86,7 +95,9 @@
 									<span><small>作者:Tab</small></span>
 								</div>
 							</article>
-							<article>
+						</div> <!--bootstrap row end-->
+						<div class="row">
+							<article class="col-sm-5">
 								<div class="img-thumbs"><a href=""><img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2015/10/CardStackEffects-e1446035196969-105x105.png" alt="测试图片"></a></div>
 								<div class="index-content">
 									<h3><a href="content/2015/css-with-html.html">CSS与HTML关联</a></h3>
@@ -94,15 +105,17 @@
 									<span><small>作者:Tab</small></span>
 								</div>
 							</article>
-							<article>
+							<article class="col-sm-5 col-sm-offset-1">
 								<div class="img-thumbs"><a href=""><img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2015/10/PullToShare-105x105.jpg" alt="测试图片"></a></div>
 								<div class="index-content">
 									<h3><a href="content/2015/css-selectors.html">CSS选择器</a></h3>
 									<time><small>2015-11-15</small></time>
 									<span><small>作者:Tab</small></span>
 								</div>
+							</div>  <!--row 2 ends-->
 							</article>
-							<article>
+							<div class="row">
+							<article class="col-sm-5">
 								<div class="img-thumbs"><a href=""><img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2015/10/Landio_Featured-105x105.jpg" alt="测试图片"></a></div>
 								<div class="index-content">
 									<h3><a href="content/2015/css-selectors-specify.html">CSS优先级判断</a></h3>
@@ -110,6 +123,15 @@
 									<span><small>作者:Tab</small></span>
 								</div>
 							</article>
+							<article class="col-sm-5 col-sm-offset-1">
+								<div class="img-thumbs"><a href=""><img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2015/10/PullToShare-105x105.jpg" alt="测试图片"></a></div>
+								<div class="index-content">
+									<h3><a href="content/2015/float-and-position.html">位置与浮动</a></h3>
+									<time><small>2015-11-15</small></time>
+									<span><small>作者:Tab</small></span>
+								</div>
+							</article>
+						</div> <!--row three ends-->
 						</section>
 					</div>
 					<div class="clearfix"></div>
