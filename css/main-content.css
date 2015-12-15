@@ -1,0 +1,86 @@
+body {
+	background: url(../img/main-content-bg.png);
+}
+main {
+	background-color: #fff;
+}
+.content-head {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 1em;
+}
+ blockquote {
+	border:1px solid silver ;
+	border-left: 3px solid green;
+	padding: .5em;
+	padding-left: 1em;
+	font-size: 85%;
+	margin-left: 1.5em;
+}
+h2 {
+	text-decoration: none;
+	padding: 0;
+}
+h2 .anchor, h3 .anchor {
+	color: #000;
+}
+h2 .anchor:hover, h3 .anchor:hover {
+	text-decoration: none;
+}
+h2 span, h3 span {
+	visibility: hidden;
+}
+h2 .fa, h3 .fa {
+	font-weight: lighter;
+	font-size: medium;
+	width: 14px;
+	padding-left: 8px;
+	vertical-align: middle;
+}
+h2:hover span, h3:hover span {
+	visibility: visible;
+
+}
+.main-content-img {
+	background: url(http://tabgre.com/img/css-selectors.png) no-repeat center;
+	background-size: 100%;
+	height: 300px;
+}
+main ul, main ol {
+	padding-top: 1em;
+	padding-left: 3em;
+}
+.codepen-eg {
+	margin-top: 1em;
+	max-width: 400px;
+}
+table, h2, h3, ul, ol {
+	margin-top: 1.5em;         /*add top margin*/
+}
+.table th, .table td {
+	text-align: center;
+}
+#reference {
+	list-style: circle;
+}
+
+/*media query @ screen min widht 1080px*/
+@media screen and (min-width: 1080px){
+main {
+	max-width:  1080px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	padding: 4em;
+	border: 1px solid silver;
+}
+.main-content-img {
+	background-size: 60%;
+	height: 400px;
+}
+.codepen-eg {
+	max-width: 100%;
+}
+
+}
+
