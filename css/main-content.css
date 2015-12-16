@@ -9,10 +9,6 @@ main {
 	margin-top: 0;
 	padding-top: 1em;
 }
-p {
-	text-indent: 0;
-	margin-bottom: .5em;
-}
  blockquote {
 	border:1px solid silver ;
 	border-left: 3px solid green;
@@ -20,12 +16,9 @@ p {
 	padding-left: 1em;
 	font-size: 85%;
 	margin-left: 1.5em;
-	margin-right: .8em;
 }
-h1 {
-	margin-top: 0;
-	padding-top: 1em;
-	text-align: center;
+pre {
+	color: green;
 }
 h2 {
 	text-decoration: none;
@@ -51,15 +44,27 @@ h2:hover span, h3:hover span {
 	visibility: visible;
 
 }
+h4 {
+	font-size: .8em;
+	font-weight: lighter;
+	margin-top: 1em;
+}
 .main-content-img {
+	background: url(http://tabgre.com/img/css-selectors.png) no-repeat center;
 	background-size: 100%;
 	height: 300px;
 }
-.float {
-	background: url(../img/float.gif) no-repeat center;
+ .img-inner {
+	background-image: none;
+	text-align: center;
+	margin-top: 1.5em;
 }
-.float-fix {
-	background:url(../img/float-fix.gif) no-repeat center;
+.media {
+	text-align: center;
+}
+video {
+	width: 100% !important;
+	height: auto !important;
 }
 main ul, main ol {
 	padding-top: 1em;
@@ -74,13 +79,6 @@ table, h2, h3, ul, ol {
 }
 .table th, .table td {
 	text-align: center;
-}
-.video-eg {
-	text-align: center;
-	margin-top: 1em;
-}
-.img-caniuse {
-	margin-top: 1em;
 }
 #reference {
 	list-style: circle;
