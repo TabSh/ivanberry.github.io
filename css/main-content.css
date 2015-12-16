@@ -1,13 +1,66 @@
 body {
-	background: url(../img/main-content-bg.png);
 }
 main {
 	background-color: #fff;
+}
+main ul, main ol {
+	padding-top: 1em;
+	padding-left: 3em;
 }
 .content-head {
 	text-align: center;
 	margin-top: 0;
 	padding-top: 1em;
+}
+
+.main-content-nav {
+	border-radius: 6px;
+	padding: 1em;
+	margin: 1.5em;
+	border: 1px solid #cecfd5;
+	max-width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.main-content-nav h4 {
+	padding-top: .5em;
+	color: rgb(45, 179, 74);
+	font-size: 1.2em;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: .6em;
+
+}
+.main-content-nav h6 {
+	padding-left: 5px;
+	
+}
+.main-content-nav ul {
+	margin-top: 1em;
+	padding-top: 0;
+	font-size: .8em;
+	list-style: circle;
+}
+.main-content-nav ul a {
+	text-decoration: none;
+	color: #0087cc;
+
+}
+.main-content-share {
+	list-style: none;
+	color: #cdcfd5;
+	padding-left: 1.2em;
+}
+.main-content-share .fa-2x {
+	font-size: 1.5em;
+}
+.main-content-share li {
+	display: inline-block;
+	padding-left: .6em;
+}
+.main-content-share span:hover {
+	color: rgb(45, 179,74);
+	
 }
  blockquote {
 	border:1px solid silver ;
@@ -66,10 +119,6 @@ h4 {
 	width: 100% !important;
 	height: auto !important;
 }
-main ul, main ol {
-	padding-top: 1em;
-	padding-left: 3em;
-}
 .codepen-eg {
 	margin-top: 1em;
 	max-width: 400px;
@@ -86,6 +135,9 @@ table, h2, h3, ul, ol {
 
 /*media query @ screen min widht 1080px*/
 @media screen and (min-width: 1080px){
+body {
+	background: url(../img/main-content-bg.png);
+}
 main {
 	max-width:  1080px;
 	margin-left: auto;
@@ -93,6 +145,7 @@ main {
 	background-color: #fff;
 	padding: 4em;
 	border: 1px solid silver;
+	position: relative;
 }
 .main-content-img {
 	background-size: 60%;
@@ -101,6 +154,12 @@ main {
 .codepen-eg {
 	max-width: 100%;
 }
+.main-content-nav {
+	background-color: white;
+	position: fixed;
+	top: 280px;
+	right: 10px;
+
 
 }
 
