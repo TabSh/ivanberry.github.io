@@ -3,6 +3,9 @@ body {
 main {
 	background-color: #fff;
 }
+main h2, main h3, main h4 {
+	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
 main ul, main ol {
 	padding-top: 1em;
 	padding-left: 3em;
@@ -67,8 +70,13 @@ main ul, main ol {
 	border-left: 3px solid green;
 	padding: .5em;
 	padding-left: 1em;
+	font-style: italic;
 	font-size: 85%;
 	margin-left: 1.5em;
+}
+blockquote footer {
+	font-family: 'blackjackregular', sans-serif;;
+	font-weight: bolder;
 }
 pre {
 	color: green;
@@ -146,6 +154,11 @@ main {
 	padding: 4em;
 	border: 1px solid silver;
 	position: relative;
+}
+.main-content {
+	border: 1px solid silver;
+	box-shadow: none;
+	background-color: white;
 }
 .main-content-img {
 	background-size: 60%;
