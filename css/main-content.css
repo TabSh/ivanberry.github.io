@@ -2,6 +2,7 @@ body {
 }
 main {
 	background-color: #fff;
+	margin: 0 10px;
 }
 main h2, main h3, main h4 {
 	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
@@ -9,6 +10,10 @@ main h2, main h3, main h4 {
 main ul, main ol {
 	padding-top: 1em;
 	padding-left: 3em;
+}
+main ul ul {
+	padding-top 0;
+	margin-top: 0;
 }
 .content-head {
 	text-align: center;
@@ -78,6 +83,13 @@ blockquote footer {
 	font-family: 'blackjackregular', sans-serif;;
 	font-weight: bolder;
 }
+dl {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+dl dt:after {
+	content: ":";
+}
 pre {
 	color: green;
 }
@@ -141,9 +153,72 @@ table, h2, h3, ul, ol {
 .table th, .table td {
 	text-align: center;
 }
+#flexbox {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+#flexbox .flexbox-half {
+	display: flex;
+	border: 1px solid #ff80ab;
+	padding: 5px;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+#flexbox .flexbox-half div {
+	background: linear-gradient(#c0ffff, white);
+}
+#flexbox .flex-parent {
+	justify-content: space-between;
+}
+#flexbox .flex-child {
+	
+	/*flexbox's flex-child*/
+} 
 #reference {
 	list-style: circle;
 }
+
+pre {
+	overflow: auto;
+	background-color: black;
+	padding: 0;
+	padding-top: 33px;
+	color: white;
+	position: relative;
+}
+.css-eg {
+	padding-top: 20px;
+}
+pre[class*="language-"] {
+	padding-top: 40px;
+	border: 1px solid silver;
+	border-top: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+pre[class*="language-"]:before {
+	content: attr(rel);
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #358CCB;
+	padding: 5px 0;
+	text-indent: 15px;
+	transform: none;
+	z-index: 2;
+	box-shadow: none;
+	height: 35px;
+}
+pre code {
+	padding: 25px 1px;
+	margin-left: 10px;
+	border-left: 1px solid red;
+}
+/*代码快格式化输出,有点问题下端代码两端比代码名称头多了1px的border*/
 
 /*media query @ screen min widht 1080px*/
 @media screen and (min-width: 1080px){
@@ -176,7 +251,19 @@ main {
 	position: fixed;
 	top: 280px;
 	right: 10px;
+}
+
+#flexbox {
+	flex-direction: row;
+	width: 48%;
+}
+#flexbox .flex-parent {
+	margin-right: 20px;
+}
+
+.css-eg {
+	color: #cd6a51;
+}
 
 
 }
-
