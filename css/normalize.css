@@ -764,3 +764,30 @@ pre {
 .reference li {
     list-style: circle;
 }
+
+/*社交软件*/
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 300px;
+	background-color: #d3cdcd;
+}
+.flex img {
+	width: 100px;
+	height: 100px;
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	filter: grayscale(1);
+}
+.flex img:last-child {
+	width: auto;
+}
+.flex img:hover {
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: grayscale(0);
+	transition: all .4s;
+
+}
