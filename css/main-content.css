@@ -217,7 +217,7 @@ pre[class*="language-"]:before {
 pre code {
 	padding: 25px 1px;
 	margin-left: 10px;
-	border-left: 1px solid red;
+	/*border-left: 1px solid red;*/
 }
 /*代码快格式化输出,有点问题下端代码两端比代码名称头多了1px的border*/
 
@@ -252,7 +252,10 @@ main {
 	position: fixed;
 	top: 280px;
 	right: 10px;
+	z-index: 1000;
+
 }
+//页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体
 
 #flexbox {
 	flex-direction: row;
