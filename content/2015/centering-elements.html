@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../../css/main.css">
 		<link rel="stylesheet" href="../../css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/prism.css">
 		<link rel="stylesheet" href="../../css/main-content.css">
         <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -31,7 +32,7 @@
 				<div class="top-logo">
 				<h1>Tab Gre</h1>
 				<span>Step forward forever</span>
-			</div>
+			    </div>
 				<nav>
 					<ul class="nav">
 						<li><a href="../../index.html">主页</a></li>
@@ -49,7 +50,7 @@
 					</div>
 				</form>
 					<span class="fa fa-search"></span>
-			</div>
+			        </div>
 				<div class="share-icon">
 				<ul>
 					<li><a class="fa fa-github fa-lg " href="https://github.com/ivanberry"></a></li>
@@ -58,7 +59,8 @@
 					<li><a class="fa fa-envelope-o fa-lg " href="mailto:tabvim@gmail.com"></a></li>
 					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
 				</ul>
-			</div>
+			    </div>
+                </div>
 			</header>
 		</div>
 		<!-- head finished-->
@@ -82,79 +84,173 @@
 			<li><span class="fa fa-envelope fa-2x"></span></li>
 		</ul>
 	</nav>
-	<h1> Main Content Temaplte</h1>
-	<blockquote>
-		Elit optio eius nesciunt esse voluptates, laborum iusto eligendi consequuntur cum officiis. Veniam veritatis deleniti magnam expedita impedit nesciunt. Repudiandae quas aspernatur quae corrupti omnis? Adipisci placeat non quisquam suscipit.
-		<footer>This is blockquote citer!</footer>
-	</blockquote>
-	<p>Amet vero laboriosam necessitatibus qui a. Cum itaque debitis doloremque aliquid laboriosam eaque facere temporibus, atque dolore aspernatur. Enim alias accusamus libero saepe quia natus rem voluptatibus quae! Soluta aspernatur.</p>
+	<h1> 居中大戏 </h1>
+    <p>前端开发中有很多时候需要用到居中，排版中需要，布局里也需要，居中的方法好像有很多，好像很难掌握一样的，参考一些博客和标准好好深入学
+        习各种居中的方法,参考文章主要来自于<em>CSS-TRICK</em>,这个地方有很多的干货，推荐阅读。
+    </p>
+        <p>居中其实可以分好几类的，我们就按水平居中、垂直居中、水平垂直居中来讨论学习吧</p>
+        <ul>
+            <li>水平居中</li>
+            <li>垂直居中</li>
+            <li>水平垂直居中</li>
+        </ul>
+	<!--<blockquote>-->
+		<!--Elit optio eius nesciunt esse voluptates, laborum iusto eligendi consequuntur cum officiis. Veniam veritatis deleniti magnam expedita impedit nesciunt. Repudiandae quas aspernatur quae corrupti omnis? Adipisci placeat non quisquam suscipit.-->
+		<!--<footer>This is blockquote citer!</footer>-->
+	<!--</blockquote>-->
+	<!--<p>Amet vero laboriosam necessitatibus qui a. Cum itaque debitis doloremque aliquid laboriosam eaque facere temporibus, atque dolore aspernatur. Enim alias accusamus libero saepe quia natus rem voluptatibus quae! Soluta aspernatur.</p>-->
 	<h2>
 		<a href="#对应部分" class="anchor">
 			<span class="fa fa-link"></span>
-			标题二</a>
-	</h2>
-	<h2>
-		<a href="#对应部分" class="anchor">
-			<span class="fa fa-link"></span>
-			标题二</a>
-	</h2>
+			水平居中</a>
+    </h2>
+    <p>居中按照处理的对象不同，我们又可以简单归类，行内元素，块级元素肯定是会有区别的，看我慢慢道来</p>
 	<h3>
 		<a href="#对应部分" class="anchor">
 			<span class="fa fa-link"></span>
-			二小标题</a>
-	</h3>
-	<div class="main-content-img">
-		<!--background-image gose here-->
-	</div>
+			inline-element居中</a>
+    </h3>
+    <p>对于inline和inline-*(inline-block,inline-table,inline-flex等等都是适用的</p>
+    <pre class="language-css" rel="CSS">
+        <code class="language-css">.center-children {
+            text-align: center;
+            }
+        </code>
+    </pre>
+
 	<div class="codepen-eg">
 		<div class="codepen-inner">
 		<!--codepen example goes here-->
-		<p data-height="342" data-theme-id="0" data-slug-hash="vLLOJw" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/vLLOJw/'>vLLOJw</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <p data-height="152" data-theme-id="0" data-slug-hash="jWmVrL" data-default-tab="css" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/jWmVrL/'>jWmVrL</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	</div>
+
+        <p>上面的例子能很好的看出来，对于inline-*的元素而言，对它父级元素添加<code>text-align:center;</code>是能够到达居中的效果的
+        这里也复习一下，我在写的时候也迷糊的一个知识点，HTML中万物皆为盒，不管是p,a,还是div,这里我迷糊的是<code>header</code>里的
+        文字算什么呢？没错也是盒子一个，只是它没有HTML标签包裹，我们就称它为匿名盒子（真悲剧）。</p>
+        <p>稍微介绍下<code>text-align</code>属性，下表明确表示它只对块级元素有效，而作用效果就是居中对齐咯，要想详细了解可以仔细阅读
+            <a href="http://www.w3.org/TR/CSS2/text.html#alignment-prop">text-align</a>。</p>
+
+        <dl class="dl-horizontal">
+            <dt>Value:</dt>
+            <dd>left | right | center | justify | inherit</dd>
+            <dt>Initial values:</dt>
+            <dd>UA,may also depend on the writing direction</dd>
+            <dt>Applies to:</dt>
+            <dd>Block-level elements</dd>
+            <dt>Inherited: yes</dt>
+        </dl>
+	<h3>
+		<a href="#对应部分" class="anchor">
+			<span class="fa fa-link"></span>
+			Block-level元素居中</a>
+    </h3>
+
+        <p>块级元素水平居中相对是很容易的，简单一句加之元素本身的语法就能实现。</p>
+        <pre class="language-css" rel="CSS"><code class="language-css">.center-block {
+        margin: 0 auto;
+            }</code></pre>
+
+ 	<div class="codepen-eg">
+		<div class="codepen-inner">
+		<!--codepen example goes here-->
+            <p data-height="126" data-theme-id="0" data-slug-hash="QyvGqO" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/QyvGqO/'>QyvGqO</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 	    </div>
 	</div>
-	<ul>
-		<li>List 1</li>
-		<li>List 2</li>
-		<li>List 3</li>
-	</ul>
-	<ol>
-		<li>Order list 1</li>
-		<li>Order list 1</li>
-		<li>Order list 1</li>
-	</ol>
 
-	<table class="table table-hover">
-		<capiton>Table Hover</capiton>
-		<tr>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-	</table>
-		<!--table goes here-->
+    <h3>
+		<a href="#对应部分" class="anchor">
+			<span class="fa fa-link"></span>
+			很多个块级元素</a>
+	</h3>
+
+        <p>这个不想多说，有很多个块级元素要一起居中，那咱们就一起变成inline-block元素吧，接着就按inlnie-*元素来处理，简单</p>
+
+
+	<h2>
+		<a href="#对应部分" class="anchor">
+			<span class="fa fa-link"></span>
+			垂直居中</a> </h2>
+
+    </h2>
+
+        <p>垂直居中可能就没有水平居中那么直白了，但是还是可以实现，理解起来也还是能理解的。</p>
+     <h3>
+		<a href="#对应部分" class="anchor">
+			<span class="fa fa-link"></span>inline-*元素的居中
+			</a>
+	</h3>
+       <p>对于inline级别元素来讲，主要用于垂直居中的属性是<a
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>,行内元素的居中中多行
+           和单行又有差别，这真是头一个大啊，不过，还是学习的嘛，对于多行元素而言，在table布局年代里，也是容易办到的，一个td里应该就可
+           以实现的，而且多行元素还有一个相关属性<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-
+           align</a>,来个例子一起看看吧。
+       </p>
+
+ 	<div class="codepen-eg">
+		<div class="codepen-inner">
+		<!--codepen example goes here-->
+            <p data-height="259" data-theme-id="0" data-slug-hash="OMmbqj" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/OMmbqj/'>OMmbqj</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	    </div>
+        <p>第一种感觉这种方法限制很多，用起来可能不是那么方便，它的原理就是在容器元素没有固定高度时，单行行内元素上下撑开的padding相等时，
+        就会出现垂直居中，而<code>line-height</code>对与父级元素已知的情况下，实现起来还是简单很多的，根据情况具体选择吧。</p>
+        <p>行内元素出现多行时，有那么一个属性<code>vertical-align</code>,对于它的认识，我们应该要好好学习下
+            <a href="https://css-tricks.com/what-is-vertical-align/">这篇文章</a></p>
+
+
+    <div class="codepen-eg">
+		<div class="codepen-inner">
+		<!--codepen example goes here-->
+            <p data-height="280" data-theme-id="0" data-slug-hash="YwVNPN" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/YwVNPN/'>YwVNPN</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	    </div>
+	</div>
+
+    <h3>
+		<a href="#对应部分" class="anchor">
+			<span class="fa fa-link"></span>块级元素居中
+			</a>
+	</h3>
+
+    <p>这么多居中的办法，看来前端工程师真的不是那么容易做的呀，不过幸好我们不是每一个都掌握的那么好，能熟练掌握那么几种就行啦，抱怨结束，
+    学习还是得继续的，突然不想说块级元素的垂直居中了，那么就任性一次吧！</p>
+        <p>任性过了，但是干货也来了</p>
+
+        <h2>绝对居中</h2>
+        <p>废话不多说，直接上例子吧，这个方法挺好用，而且兼容行也挺好的，但是有个缺点就是需要声明它父级元素的高度，可能会让人有点不爽,
+        当然，这个方法也是偷师来的，放上<a href="https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertica
+        l-centering-css/">原出处</a> </p>
+
+ <div class="codepen-eg">
+		<div class="codepen-inner">
+		<!--codepen example goes here-->
+            <p data-height="348" data-theme-id="0" data-slug-hash="adWpmv" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/adWpmv/'>adWpmv</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	    </div>
+	</div>
+
+
+        <p>其实关于居中说到这里本来是可以结束了的，这些东西够我们消化了一会了，但是我的干货就是多，下面要来一个终极办法，彻底去除，什么
+        要定义高度啊，什么行内元素，块级元素，还有单行多行，通通不管，那就是我们的主角：<a href="http://tab
+        gre.com/content/2015/flex-layout.html">Flexbox</a></p>
+
+ <div class="codepen-eg">
+		<div class="codepen-inner">
+		<!--codepen example goes here-->
+            <p data-height="250" data-theme-id="0" data-slug-hash="EPXgro" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/EPXgro/'>EPXgro</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	    </div>
+
+     <p>这里不展开说它，用起来就是很舒服，代码量也减少了许多，也好理解，现在问题就是可能支持度不够高，但是应该是未来发展的趋势，详细的情况
+     推荐css-trick。</p>
+
+
+
+
 
 	<ul id="reference">
 		<caption>Reference</caption>
 		<!--refrence goes here-->
-		<li><a href="">reference-1</a></li>
-		<li><a href="">reference-2</a></li>
-		<li><a href="">reference-3</a></li>
-		<li><a href="">reference-4</a></li>
+		<li><a href="https://css-tricks.com/centering-css-complete-guide/">css-trick</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">MDN-line-height</a></li>
+		<li><a href="https://www.w3.org/community/webed/wiki/CSS/Properties/vertical-align">W3C-vertical-align</a></li>
+		<li><a href="http://www.w3.org/Style/Examples/007/center.en.html">W3C-centering-things</a></li>
 	</ul>
 	</main> <!-- main content finish here-->
 		<!--default main content begining-->
@@ -168,17 +264,15 @@
 		</footer>
 		<!--footer finish-->
 
-	
-		
-		
-		
-		
-		
-		<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+
+        <script src="../../js/prism.js"></script>
+        <script src="../../js/plugins.js"></script>
+		<script async src="../../js/ei.js"></script>
         <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <!--<script src="js/plugins.js"></script>-->
+        <!--<script src="js/main.js"></script>-->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
