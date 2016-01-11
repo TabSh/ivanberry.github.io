@@ -12,7 +12,7 @@ main ul, main ol {
 	padding-left: 3em;
 }
 main ul ul {
-	padding-top 0;
+	padding-top:0;
 	margin-top: 0;
 }
 
@@ -42,7 +42,7 @@ main ul ul {
 }
 .main-content-nav h6 {
 	padding-left: 5px;
-	
+
 }
 .main-content-nav ul {
 	margin-top: 1em;
@@ -69,7 +69,7 @@ main ul ul {
 }
 .main-content-share span:hover {
 	color: rgb(45, 179,74);
-	
+
 }
  blockquote {
 	border:1px solid silver ;
@@ -174,9 +174,9 @@ table, h2, h3, ul, ol {
 	justify-content: space-between;
 }
 #flexbox .flex-child {
-	
+
 	/*flexbox's flex-child*/
-} 
+}
 #reference {
 	list-style: circle;
 }
@@ -235,7 +235,7 @@ pre code {
 /*media query @ screen min widht 1080px*/
 @media screen and (min-width: 1080px){
 body {
-	background: url(../img/main-content-bg.png);
+	background-color: #E0E0E0;
 }
 main {
 	max-width:  1080px;
@@ -266,7 +266,7 @@ main {
 	z-index: 1000;
 
 }
-//页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体
+/*页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体*/
 
 #flexbox {
 	flex-direction: row;
