@@ -270,7 +270,9 @@ main {
 
 #flexbox {
 	flex-direction: row;
-	width: 48%;
+}
+#flexbox .flexbox-half {
+    width: 48%;
 }
 #flexbox .flex-parent {
 	margin-right: 20px;
