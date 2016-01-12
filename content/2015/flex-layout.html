@@ -116,7 +116,7 @@
 		<dt>主轴线尺寸,主轴线属性</dt>
 		<dd>规定子元素在主轴上所占的维度，是它的主要尺寸，根据主轴的不同，可以是子元素宽度或者高度。</dd>
 		<dt>主轴起点，主轴终点</dt>
-		<dd>轴线上的方向为从起点到重点扩展子元素</dd>
+		<dd>轴线上的方向为从起点到终点扩展子元素</dd>
 	</dl>
 	<p>本来想把交叉轴同样列出来，但是这个时候我想到了做数学证明题时：同理可得。理解还这个最基本点后，我们再开始说道说道，基础知识</p>
 	<h2>
@@ -125,7 +125,7 @@
 			基础知识</a>
 	</h2>
 	<section id="flexbox">
-		
+
 		<!--左半边为容器属性-->
 		<div class="flexbox-half flex-parent">
 			<img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-container.svg" alt="父级元素属性">
@@ -137,10 +137,10 @@
 
 <pre rel="CSS"><code class="language-css">.container {
          display: flex; /*or inline-flex*/
-        } 
+        }
 </code></pre>
-            <p>关键属性，申明对想是容器元素，对容器元素本身没有任何影响，作用对象是它的直接子元素。</p>
-</div>	
+            <p>关键属性，声明对象是容器元素，对容器元素本身没有任何影响，作用对象是它的直接子元素。</p>
+</div>
 
 				   <!--自定义代码块-->
 
@@ -148,10 +148,10 @@
 				<h4>flex-direction</h4>
 				<img src="../../img/flex-direction1.svg" alt="flex-direction">
 				<p>这个个属性定义了flex容器下子元素布局的主轴参考线，它是容器的属性，表明子元素或水平或垂直轴线上排列。</p>
-				<pre rel="CSS"><code class="language-css">.container { 
-				flex-direction: row | row-reverse | column 
-				                | column-reverse;
-				}</code></pre>
+				<pre rel="CSS"><code class="language-css">.container {
+	flex-direction: row | row-reverse | column
+	| column-reverse;
+	}</code></pre>
 				<ul>
 					<li>row:默认值，定义主轴为水平向，自左向右（ltr)。</li>
 					<li>row-reverse: 对本身为自左向右书写的文字，改变为相反的排列方向。</li>
@@ -159,16 +159,16 @@
 					<li>column-reverse: 如本身是自上而下，该为相反方向。</li>
 				</ul>
 				<p>这个属性值改变容器内子元素的排列方向，我们下面会集中举例，便于学习</p>
-				
+
 			</div>
 
 			<div>
 				<h4>flex-wrap</h4>
 				<img src="../../img/flex-wrap.svg" alt="是否可打断">
-				<pre rel="CSS"><code class="language-css">.container {
-				flex-wrap: nowrap | wrap | wrap-reverse;
-				}
-				</code></pre>
+	<pre rel="CSS" class="language-css"><code class="language-css">.container {
+	flex-wrap: nowrap | wrap | wrap-reverse;
+	}
+	</code></pre>
 				<ul>
 					<li>nowrap:默认值，单行显示</li>
 					<li>wrap: 多行显示,默认左至右</li>
@@ -182,19 +182,19 @@
 				<h4>flex-flow</h4>
 				<img src="" alt="">
 				<p>flex-flow是flex-direction flex-wrap的缩写，定义了容器内的主轴线，默认值为row nowrap。</p>
-				<pre rel="CSS"><code class="language-css">.container {
-				flex-flow: <'flex-direction'> | <'flex-wrap'>;
-				}</code></pre>
+	<pre rel="CSS"><code class="language-css">.container {
+	flex-flow: <'flex-direction'> | <'flex-wrap'>;
+	}</code></pre>
 			</div>
 
 			<div>
 				<h4>justify-content</h4>
 				<img src="../../img/justify-content.svg" alt="justify-content">
 				<p>定义主轴线上子元素的对齐，它表现为对轴线上未充分利用的利用，说起来好像很绕口，但是试试例子就能明白它</p>
-				<pre rel="CSS"><code class="language-css">.container {
-				justify-content: flex-start | flex-end
-				                 space-between | space-around;
-				}</code></pre>
+	<pre rel="CSS"><code class="language-css">.container {
+	justify-content: flex-start | flex-end
+	          space-between | space-around;
+	}</code></pre>
 				<ul>
 					<li>flex-stat: 默认值，在主轴线上从轴线起点开始向后排列</li>
 					<li>flex-end: 在主轴线上从轴线终点向前排列</li>
@@ -207,10 +207,10 @@
 				<h4>align-items</h4>
 				<img src="../../img/align-items.svg" alt="align-items">
 				<p>当前主轴线的交叉线方向上的排列方式，属性值跟justify-content类似，从上图我们能大致了解到它的表现。</p>
-				<pre rel="CSS"><code class="language-css">.container {
-				align-items: flex-start | flex-end| 
-				             center | baseline | stretch
-				}</code></pre>
+	<pre rel="CSS"><code class="language-css">.container {
+	align-items: flex-start | flex-end|
+	          center | baseline | stretch
+	}</code></pre>
 				<ul>
 					<li>flex-start: 主轴交叉线起点为起点排列</li>
 					<li>flex-end: 主轴交叉线终点为起点排列</li>
@@ -229,7 +229,7 @@
 				这个属性值才有存在的意义，我们会在之后的具体例子中体会到。</p>
 				<pre rel="CSS"><code class="language-css">.container {
 				align-content: flex-start | flex-end |
-				               center | space-between | 
+				               center | space-between |
 				               space-between | stretch
 				}</code></pre>
 				<ul>
@@ -241,7 +241,7 @@
 					<li>stretch: 拉伸占满</li>
 				</ul>
 			</div>
-		
+
 		</div>
 
 		<!--右半边为元素属性-->
@@ -257,7 +257,7 @@
 				<code class="language-css">.item {
 			order: &lt;integer&gt;;
 				     }</code></pre>
-						
+
 			</div>
 
 			<div>
@@ -268,7 +268,7 @@
 				<pre rel="CSS"><code class="language-css">.item {
 				flex-grow: &lt;number&gt;
 				}</code></pre>
-			
+
 			</div>
 
 			<div>
@@ -277,33 +277,33 @@
 				<pre rel="CSS"><code class="language-css">.item {
 				flex-shrink: &lt;number&gt;
 				}</code></pre>
-					
+
 			</div>
 
 			<div>
 				<h4>flex-basis</h4>
 				<p>这个属性值值得玩味，它定义了在重分配未利用空间前子元素默认大小，它可以是长度单位或者关键词（auto, content),当为关键词时，
 				默认大小就需要看子元素本身的宽，高属性,content好理解，根据内容控制。</p>
-				<pre rel="CSS"><code class="language-css">flex-basis: {
-				&lt;length&gt; | auto /*default*/ | content;
-				}</code></pre>
+	<pre rel="CSS"><code class="language-css">flex-basis: {
+	&lt;length&gt; | auto /*default*/ | content;
+	}</code></pre>
 				<p>当它为0时，不考虑多余的未利用空间（<em>这还是一个疑惑，我等会要试试</em>,当设置为<em>auto</em>时，根据
 				<em>flex-grow</em>来分配空间。</p>
 				<img src="../../img/rel-vs-abs-flex.svg" class="img-responsive" alt="flex-basis">
-			
+
 			</div>
 
 			<div>
 				<h4>flex</h4>
 				<p>flex是上面上个子元素属性值的简写，W3C推荐使用简写，简写好像很厉害的样子，可以仔细研究研究的。</p>
-				<pre rel="CSS"><code class="language-css">.item {
-				flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt; &lt;'flex-basis'&gt;];
-				}</code></pre>
-			
-			
-			
-			
-			
+	<pre rel="CSS"><code class="language-css">.item {
+	flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt; &lt;'flex-basis'&gt;];
+	}</code></pre>
+
+
+
+
+
 			</div>
 
 			<div>
@@ -312,14 +312,14 @@
 				<p>这个值可以覆盖<em>align-items</em>,可以完全自主的定义某一个特定的子元素，也是很好玩的一个属性。关于flex布局
 				的相关知识介绍的超不多了，再提一句，<em>float</em>,<em>clear</em>,<em>vertical-algin</em>对flex-items没
 				有作用啦！</p>
-			
-			
-			
-			
+
+
+
+
 			</div>
-		
-		
-		</div> 
+
+
+		</div>
 
 	</section> <!-- flex layout ends here -->
 
@@ -362,14 +362,14 @@
 	                               /*the remaining space
 								   */
 	}
-	
+
 	</code></pre>
 	<div class="codepen-eg">
 		<div class="codepen-inner">
 			<p data-height="259" data-theme-id="0" data-slug-hash="XXKjVr" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/XXKjVr/'>XXKjVr</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 		</div>
 	</div>
-	
+
 	<p>我们来个实际点的应用，我们经常要做的，来个导航，要求简单：大屏时右上角展开，移动端单行重叠展开,想想想我们平常怎么做的，导航哟，不难
 	先来个<code>ul</code>,先去他的<code>list-item</code>,在把它的<code>li</code>来个<code>display: inline-block;</code>大致上是可以啦，接着就是
     细节调整，调整下padding，调整下margin,我去，真是麻烦，这是像素级别的操作啊！</p>
@@ -383,9 +383,9 @@
 	<p>我们之前提到了关于子元素一个非常好用的属性，就是在不改变HTML结构的同时，我们让子元素出现不同的顺序，应该蛮好玩的。</p>
 	<div class="codepen-eg">
 		<div class="codepen-inner">
-		
-		
-		
+
+
+
 		</div>
 	</div>
 
@@ -425,7 +425,7 @@
 
 
 	</main>
-	
+
 
 
 		<footer class="st-footer">
@@ -443,11 +443,11 @@
 		console.log("%c把我加到你的团队吧！","font-size: 30px; color: blue;");
 
 		</script>
-		
-		
-		
-		
-		
+
+
+
+
+
 		<script src="../../js/ei.js"></script>
         <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
@@ -463,6 +463,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-69949710-1','auto');ga('send','pageview');
        </script>
- 
+
     </body>
 </html>
