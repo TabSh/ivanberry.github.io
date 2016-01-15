@@ -222,6 +222,9 @@ pre code {
 	margin-left: 10px;
 	/*border-left: 1px solid red;*/
 }
+.main-content-nav {
+    opacity: 1;
+}
 /*代码快格式化输出,有点问题下端代码两端比代码名称头多了1px的border*/
 
 /*.flex {
@@ -265,6 +268,7 @@ main {
 	top: 280px;
 	right: 10px;
 	z-index: 1000;
+    opacity: 0;
 
 }
 /*页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体*/
