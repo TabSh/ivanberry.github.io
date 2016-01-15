@@ -180,6 +180,9 @@ h4 {
 #reference {
 	list-style: circle;
 }
+.codepen-eg {
+	max-width: 100%;
+}
 
 pre {
 	overflow: auto;
@@ -255,9 +258,7 @@ main {
 	background-size: 60%;
 	height: 400px;
 }
-.codepen-eg {
-	max-width: 100%;
-}
+
 .main-content-nav {
 	background-color: white;
 	position: fixed;
