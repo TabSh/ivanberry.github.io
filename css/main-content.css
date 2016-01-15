@@ -148,7 +148,7 @@ h4 {
 	margin-top: 1em;
 	max-width: 400px;
 }
-table, h2, h3, ul, ol {
+#main h2,#main h2,#main h3, #main ul,#main ol {
 	margin-top: 1.5em;         /*add top margin*/
 }
 .table th, .table td {

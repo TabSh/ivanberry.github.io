@@ -1,0 +1,30 @@
+body {
+  max-width: 1080px;
+  margin: 0 auto; }
+
+header {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  border: 1px solid green; }
+
+#demo {
+  margin: 20px auto;
+  width: 100%; }
+
+.flex, .flex-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin: 20px auto; }
+
+.flex-item {
+  color: white;
+  margin-right: 1em; }
+
+figure ul {
+  margin: 0 auto;
+  list-style: none; }
+
+/*# sourceMappingURL=google-index.css.map */
