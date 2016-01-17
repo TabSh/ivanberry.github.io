@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tab的前端路</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+		<link rel="stylesheet" href="../../css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<div class="st-header">
+			<header class="header">
+				<div class="top-logo">
+				<h1>Tab Gre</h1>
+				<span>Step forward forever</span>
+			</div>
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html">主页</a></li>
+						<li><a href="content/2015/work-env-setting.html">前端学习</a></li>
+						<li><a href="translation.html">译文参考</a></li>
+						<li><a href="contact.html">关于我</a></li>
+					</ul>
+				</nav>
+				<div class="st-header-right st-search">
+					<div class="st-search">
+				<form action="http://www.baidu.com" method="post" name="st-search">
+					<div class="st-input-wrap">
+					<input type="text" id="st-search" value="" placeholder="search on site">
+					<input type="submit" value="">
+					</div>
+				</form>
+					<span class="fa fa-search"></span>
+			</div>
+				<div class="share-icon">
+				<ul>
+					<li><a class="fa fa-github fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-linkedin-square fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-google-plus fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-envelope-o fa-lg " href="mailto:tabvim@gmail.com"></a></li>
+					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
+				</ul>
+			</div>
+			</header>
+		</div>
+		<!-- head finished-->
+
+	<div class="st-content">
+			<div class="container">
+				<div class="row">
+					<div class="main-content" style="margin-top: 0; box-shadow: none;border: 1px solid silver;background-color: white;">
+						<h2 style="margin-bottom: 1.2em;">CSS选择器</h2>
+						<p>
+						CSS选择器是CSS学习的一个重点，它是CSS与HTML交流的桥梁。
+						</p>
+						<p>
+						CSS选择器，粗糙的可以分为三大类：基本类、组合类、伪类。
+						</p>
+						<ul id="selectorType">
+							<li>Basic selectors
+							    <ul>
+							    	<li>Type selectors</li>
+							    	<li>Class selectors</li>
+							    	<li>ID selectors</li>
+							    	<li>Universal selectors</li>
+							    	<li>Attribute selectors</li>
+							    </ul>
+							</li>
+							<li>Combination selectors
+							    <ul>
+							    	<li>Adjiacent sibling selectors</li>
+							    	<li>General sibling selectors</li>
+							    	<li>Child selectors</li>
+							    	<li>Descendant selectors</li>
+							    </ul>
+							</li>
+							<li>Pseudo selectors</li>
+						</ul>
+						<p>以上分类基本包含了所有类型的选择器分类，它们有共同点，语法基本相同,
+						不同的点也有不少，最大的不同是组合类别和伪类看上去很复杂，看我一一道来。
+						</p>
+						<pre>
+						<h4>Synax:</h4><code>selecor { Property: Value;}</code>
+						</pre>
+						<h3>1、基本类</h3>
+						<p>基本类别的选择器其实没有特别多注意事项，搞清楚基本语法以后很快能用上了，
+						<img class="img-responsive text-center" src="../../img/css-selectors.png" alt="选择器语法">
+						</p>
+						<div class="codepen-example">
+							<p data-height="356" data-theme-id="0" data-slug-hash="obvvWZ" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/obvvWZ/'>obvvWZ</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+						</div>
+						<p>
+						自己学习的时候没有发现，这个属性的值还支持中文，这很是友好呀！上面的实例充分展示基本类别的选择器，元素名匹配，类名匹配，ID匹配,全局和属性匹配。
+						</p>
+						<h3>2.组合类</h3>
+						<p>
+						组合类选择器与HTML树结构紧密联系，具体学习之前，很有必要清楚HTML树形结构。
+						</p>
+						<img class="img-responsive" src="../../img/html-structrue.jpg" alt="HTML树形结构">
+						<p>
+						树形中存在的各种元素，它们之间存在一定的关系，父子关系、继承关系、毗邻关系等等。正如上图所示，父子关系是指某元素直接是另外
+						<em>html</em>是<em>head、body</em>的父元素,<em>head</em>又是<em>title,link,meta</em>的父元素，它们之间都是直接的父子关系。
+						</p>
+						<P>
+						还有一种包含有上面提及的父子关系：继承关系，如图，<em>body</em>是<em>html</em>的父元素，<em>h1,h2,p,div,ul</em>都是<em>
+							body</em>的子元素，但是它们却不能称为html的子元素，而是继承，更加直白的说就是后代关系，和生物学的族谱很是类似，不止有父子
+						还有祖孙关系。毗邻关系就简单了，有相同父元素的两元素，如图中的，h1和h2就是毗邻关系，类比就是兄弟关系，但是h1和a就不是兄弟关系啦，
+						这样说明还是挺能理解的吧。
+						</P>
+						<p>
+						背景知识了解完后，开始梳理组合选择器，组合选择器中用的最多大概有4种，如下表：
+						<div class="dl">
+						<h4>组合选择器类别</h4>
+						<dl class="dl-horizontal">
+							<dt>Child selectors</dt>
+							<dd><code>A > B</code>,父子关系，上图中的ul和li之间</dd>
+							<dt>Descendant selectors</dt>
+							<dd><code>A B</code>,继承选择，上图中的div与em a</dd>
+							<dt>Adjacent sibling selectors</dt>
+							<dd><code>A + B</code></dd>
+							<dt>General sibling selectors</dt>
+							<dd><code>A ~ B</code></dd>
+						</dl>
+					</div>
+					    <p>
+						还是举例子容易说明：
+						<div class="codepen-example">
+						<p data-height="411" data-theme-id="0" data-slug-hash="qbWaMW" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/qbWaMW/'>qbWaMW</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					</div>
+					<h3>3.伪类</h3>
+					<p>
+					伪类元素是选择器中相对复杂的一个知识点，它们的存在提供了我们选择不一定在HTML中存在的节点，市面上现代浏览器对伪类的支持
+					相对较好。
+					</p>
+					<h4>3.1 Pseudo-class</h4>
+					<p>
+					首先学习Pseudo-class，是因为现代浏览器对它的支持更好，实际使用中使用最多的就是关于<code>a</code>的不同状态。我们先认识下它们。
+					<div class="dl">
+						常见伪类:
+					<dl class="dl-horizontal">
+						<dt>:link</dt>
+						<dd>未访问超链接</dd>
+						<dt>:visited</dt>
+						<dd>已访问超链接</dd>
+						<dt>:focus</dt>
+						<dd>比如网页浏览Tab键选定某超链接</dd>
+						<dt>:hover</dt>
+						<dd>鼠标在元素上</dd>
+						<dt>:active</dt>
+						<dd>被用户激活，例如选取超链接并按住鼠标</dd>
+					</dl>
+				    </div>
+					注意两点：
+					<ol style="margin-left: 3em;">
+						<li>以超链接举例，但是这几个伪类适用于任何元素</li>
+						<li>CSS中出现的顺序很重要，推荐使用link-visit-hover-active（LVHAC,LV哈)</li>
+					</ol>
+					</p>
+					<p>
+					惯例个栗子：
+						<div class="codepen-example">
+							<p data-height="303" data-theme-id="0" data-slug-hash="VeZmZK" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/VeZmZK/'>VeZmZK</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+						</div>
+					</p>
+					<h4>Pseudo-elment slectors</h4>
+					<p>
+					CSS2.1中定义了4种伪类元素：首字母类，首行，之前与之后，也不知道标准是翻译成什么，我暂且写成这样子，
+					实际应用看我举的栗子。
+					</p>
+					<div class="codepen-example">
+						<p data-height="272" data-theme-id="0" data-slug-hash="bEbgKd" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/bEbgKd/'>bEbgKd</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+					</div>
+					<p>
+					根据W3C标准来看，基本可以按照表面文字意思理解，应用时，还有一些细节需要把握，
+					伪类元素并不适用于所有的属性，对于:first-letter和:first-line见下表：
+					</p>
+					<table class="table-responsive table-striped ">
+						<tr>
+							<th>:first-letter</th>
+							<th>:first-line</th>
+						</tr>
+						<tr>
+							<td>All font properties</td>
+							<td>All font properties</td>
+						</tr>
+						<tr>
+							<td>color</td>
+							<td>color</td>
+						</tr>
+						<tr>
+							<td>All background properties</td>
+							<td>All background properties</td>
+						</tr>
+						<tr>
+							<td>All margin properties</td>
+							<td>word-spacing</td>
+						</tr>
+						<tr>
+							<td>All padding properties</td>
+							<td>letter-spacing</td>
+						</tr>
+						<tr>
+							<td>All border properties</td>
+							<td>text-decoration</td>
+						</tr>
+					</table>
+					<p>
+					言在最后，通过各类选择器，运用基本语法，适用各种属性值，我们可以更改内容版式等，大大丰富网页内容，
+					使它们不会过于呆板。更重要的是，正如上面学习一样：实现很是容易。
+					</p>
+
+
+					<div class="reference">
+						<span>参考：</span>
+						<ul>
+							<li><a href="https://en.support.wordpress.com/custom-design/css-basics/">CSS-Basic</a></li>
+							<li><a href="https://drafts.csswg.org/selectors-3/#selectors">W3C selectors</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN Pseudo-class</a></li>
+							<li><a href="https://5d0c00d0babedc9d7abd62f30361d865b480e494.googledrive.com/host/0B4m99Zn8K7eGZzlUTFZCX20yVE0/css/CSS.The.Definitive.Guide.Eric.A.Meyer.pdf">CSS:The Definitive Guide</a></li>
+						</ul>
+					</div>
+
+
+
+					</div>
+						<!-- main content goes here -->
+					</div>
+				</div>
+			</div>
+
+	</div>
+		<!--default main content begining-->
+
+
+		<footer class="st-footer">
+				<div class="st-inner">
+					<span>&copy 2015 by</span>
+					<a href="www.tabgre.com" title="Tab">Tab gre</a>
+				</div>
+		</footer>
+		<!--footer finish-->
+
+
+
+
+
+
+
+        <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/main.js"></script>
+		<script src="../../js/ei.js"></script>
+
+
+
+         <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-69949710-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

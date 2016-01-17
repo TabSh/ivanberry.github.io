@@ -1,0 +1,172 @@
+$primaryColor: rgb(47, 185, 239);
+$textColor: #fff;
+//small devices (table, 768px and up)
+$screen-sm-min: 768px;
+
+//medium devices (desktop, 992px and up)
+$screen-md-min: 992px;
+
+//large device (large destop, 1200px and up)
+$screen-lg-min: 1200px;
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header {
+    background-color: $primaryColor;
+    padding: 20px;
+    color: $textColor;
+    box-shadow: 2px 2px  20px #2fb9ef;
+
+    .header-body {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       width: 60%;
+       margin: 0 auto;
+       text-align: center;
+       position: relative;
+       .ui.card, .card span {
+           width: 20rem;
+           text-align: left;
+    }
+       .card .image {
+            text-align: center;
+            background: #7BC3FC!important;
+            img {
+                width: 50%;
+                display: inline; //overwtire the semantic ui sets
+            }
+        }
+        .pic {
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+        .pic:hover {
+            transform: scale(-1,1);
+        }
+
+   }
+    h1 {
+        font-size: 3rem;
+        text-shadow: 1px  1px  15px #000;
+    }
+}
+main {
+    margin: 4rem;
+}
+
+.row {
+    padding: 2rem 3rem;
+    .unit {
+        //
+        padding: 2px 2px;
+        border: 1px solid silver;
+        box-shadow: -3px 3px 10px #9E9E9E;
+        border-radius: 5px;
+        color: $textColor;
+        transition: transform .5s ease-in-out;
+    }
+    .unit:hover {
+        transform: scale(1.1);
+    }
+    .content {
+        flex: 1;
+    }
+    img {
+        width: 100%;
+        height: 4rem;
+        background-color: #1E88E5;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+}
+
+.unit1 {
+    background-color: #1E88E5;
+}
+.unit2 {
+    background-color: #AB47BC;
+}
+.unit3 {
+    background-color: #7E57C2;
+}
+.unit4 {
+    background-color: #009688;
+}
+.unit5 {
+    background-color: #43A047;
+}
+
+.unit6 {
+    background-color: #827717;
+}
+.unit7 {
+    background-color: #EF6C00;
+}
+
+.unit8 {
+    background-color: #616161;
+}
+//定义项目展示区域,类名unit,为flexbox布局
+main .content {
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    //background-image: linear-gradient(pink, silver);
+    h2 {
+        margin-top: 1em;
+
+    }
+
+}
+//特效部门,hover增加背景模糊,凸显额外的文字,隐藏content-details
+.content-details {
+    padding: 20px 20px;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1s .5s cubic-bezier(0.690, 0.205, 0.200, 0.850);
+
+}
+.unit:hover {
+
+     .content-details {
+         opacity: 1;  //鼠标滑过.unit content-details显现
+         }
+     h2 {
+         background-image: -webkit-linear-gradient(left, #64b3f4 20%, #FBC02D 40%, #E64A19 60%, #00E676 80%, #FF5252);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+
+     }
+}
+//定义圆形图像滚出和回滚效果
+@keyframes round{
+   from {
+       -webkit-transform: rotate(0deg) scale(.5);
+       left: 110%;
+   }
+    50% {
+        -webkit-transform: rotate(-720deg) scale(.5);
+    }
+    to {
+        -webkit-transform: rotate(0deg) scale(1);
+        left: 0;
+    }
+}
+#pic {
+    position: absolute;
+    left: 0;
+    animation: round 3s;
+}
+//h3文本文字随时间移动
+
+
+
+
