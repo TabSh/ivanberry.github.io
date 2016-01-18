@@ -51,4 +51,4 @@
 + [x] “居中大戏”今天必须完成 (1-7)
 
 ## 2016-1-15
-[文件结构](./img/fileStructure.png)
+![文件结构](./img/fileStructure.png)
