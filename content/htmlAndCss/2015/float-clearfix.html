@@ -7,18 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
 		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../../fonts/blackjack_regular_macroman/stylesheet.css" type="text/css" />
+		<link rel="stylesheet" href="../../../fonts/blackjack_regular_macroman/stylesheet.css" type="text/css" />
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../css/main.css">
-		<link rel="stylesheet" href="../../css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="../../css/prism.css">
-		<link rel="stylesheet" href="../../css/main-content.css">
+		<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/prism.css">
+		<link rel="stylesheet" href="../../../css/main-content.css">
 
 
     </head>
@@ -61,6 +61,7 @@
 					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
 				</ul>
 			</div>
+                    </div>
 			</header>
 		</div>
 		<!-- head finished-->
@@ -88,12 +89,12 @@
 
 	<p>在页面布局时，存在多栏布局的情况下，我们大多会采用float的技术，使得页面完美呈现我们所需要的状态，同时，问题也伴随而来，这样的问题就引入了一个前端开发中经常用的技术：浮动清楚</p>
 	<h2>
-		<a href="#对应部分" class="anchor">
+		<a href="" class="anchor">
 			<span class="fa fa-link"></span>
 			伴随的问题</a>
 	</h2>
 
-	<img class="img-responsive" src="../../img/float-layout.png" alt="浮动问题">
+	<img class="img-responsive" src="../../../img/float-layout.png" alt="浮动问题">
 
 
 	<pre rel="HTML" class="language-html">
@@ -136,7 +137,7 @@
 </pre>
 
 
-	<img class="img-responsive" src="../../img/float-clearfix.png" atl="空元素块添加">
+	<img class="img-responsive" src="../../../img/float-clearfix.png" alt="空元素块添加">
 	<p>
 		很明显，这个方法很有效，原理也很简单，空元素块的clear属性添加使它占满父容器宽度，使得其左右都不能存在任何其他元素。方法有效的同时，同样也有它的问题，为了清楚浮动而带来的多余代码是令人困扰的，如果有更好的方法，在有效清除浮动的前提下语义化标签，放弃过多语义不清的代码是科学的。
 	</p>
@@ -150,7 +151,7 @@
 	<h3>父容器浮动</h3>
 	<p>这种方法其实是最不适合的，本身float技术就是出于滥用的阶段，使用这种方法更是饮鸩止渴，不值得提倡，不考虑这些的前提下，它也是一种有用的方法。</p>
 
-	<img src="../../img/parent-float.png" alt="父元素浮动" class="img-responsive">
+	<img src="../../../img/parent-float.png" alt="父元素浮动" class="img-responsive">
 
 <pre rel="CSS" class="language-css">
 <code class="language-css">
@@ -192,7 +193,7 @@
 	这种方法可能少见，就目前而言，个人觉得是最好的，没有多余的语义不明的标签，也没有看起来怪怪的css语法，对现代浏览器而言，适用性都很强，浏览器市场中绝大多数都很好使用这种方法来清除浮动，值得学习并应用于项目中。
 </p>
 
-<img src="../../img/pseudo-element.png" alt="伪元素清楚浮动" class="img-responsive">
+<img src="../../../img/pseudo-element.png" alt="伪元素清楚浮动" class="img-responsive">
 
 <pre rel="CSS" class="language-css">
 <code class="language-css">
@@ -260,7 +261,7 @@
 	</code>
 </pre>
 
-<img src="../../img/flex-layout-clearfix.png" class="img-responsive" alt="flex布局">
+<img src="../../../img/flex-layout-clearfix.png" class="img-responsive" alt="flex布局">
 
 
 <p>
@@ -271,7 +272,7 @@
 <!--注意，本片文章还需要添加，最推荐使用的浮动清楚方法和flex布局的codepen例子,最好还加一个兼容性的图-->
 
 <h2>
-	<a href="#对应部分" class="anchor">
+	<a href="" class="anchor">
 		<span class="fa fa-link"></span>
 		结论</a>
 </h2>
@@ -314,7 +315,7 @@
 		<footer class="st-footer">
 				<div class="st-inner">
 					<span>&copy 2015 by</span>
-					<a href="www.tabgre.com" title="Tab">Tab gre</a>
+					<a href="http://www.tabgre.com" title="Tab">Tab gre</a>
 				</div>
 		</footer>
 		<!--footer finish-->
@@ -326,14 +327,11 @@
 
 
 
-        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="../../js/prism.js"></script>
+        <script type="text/javascript" src="../../../js/prism.js"></script>
 
-		<script async src="../../js/ei.js"></script>
-        <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<script async src="../../../js/ei.js"></script>
+        <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -344,6 +342,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-69949710-1','auto');ga('send','pageview');
         </script>
-       </script>
     </body>
 </html>

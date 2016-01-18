@@ -7,18 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
 		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../../fonts/blackjack_regular_macroman/stylesheet.css" type="text/css" />
+		<link rel="stylesheet" href="../../../fonts/blackjack_regular_macroman/stylesheet.css" type="text/css" />
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../css/main.css">
-		<link rel="stylesheet" href="../../css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../css/normalize.css">
-		<link rel="stylesheet" href="../../css/prism.css">
-		<link rel="stylesheet" href="../../css/main-content.css">
+		<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/normalize.css">
+		<link rel="stylesheet" href="../../../css/prism.css">
+		<link rel="stylesheet" href="../../../css/main-content.css">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -59,6 +59,7 @@
 					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
 				</ul>
 			</div>
+                    </div>
 			</header>
 		</div>
 		<!-- head finished-->
@@ -102,10 +103,10 @@
 	<p>上面四种模型，我们这里不详细介绍，现在有新添了一个新的，我们接下来介绍：flex layout.个人理解flex在布局上能使以往我们很是为难
 	情况得以改善，而且实现也很容易，现实中Bootstrap也在一定程度上能帮到我们，但是flexout的实现非常简单。首先明确最重要一点,父级容器
 	添加<code>display: flex;</code>后，就改变它元素的行为，在容器有了一个横纵坐标系的参照，接下来，我会参照W3C标准文档，MDN文档和
-	天才CSS专家<a href="css-tricks.com">Chris Coyier</a>网站学习，它们的资料对问题的表述非常到位，所以我们直接借鉴啦！</p>
+	天才CSS专家<a href="http://css-tricks.com">Chris Coyier</a>网站学习，它们的资料对问题的表述非常到位，所以我们直接借鉴啦！</p>
 	<figure>
 		<img class="img-responsive" src="http://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg" alt="参考系">
-		<figurecaption>容器参考系</firgurecaption>
+		<figurecaption>容器参考系</figurecaption>
 	</figure>
 
 	<p>如上图，在容器添加flex属性后，容器参考系发生了变化，有了两根垂直相交的轴线，主轴和相交轴。正式学习之前就这个二维的坐标
@@ -120,7 +121,7 @@
 	</dl>
 	<p>本来想把交叉轴同样列出来，但是这个时候我想到了做数学证明题时：同理可得。理解还这个最基本点后，我们再开始说道说道，基础知识</p>
 	<h2>
-		<a href="#对应部分" class="anchor">
+		<a href="" class="anchor">
 			<span class="fa fa-link"></span>
 			基础知识</a>
 	</h2>
@@ -146,7 +147,7 @@
 
 			<div>
 				<h4>flex-direction</h4>
-				<img src="../../img/flex-direction1.svg" alt="flex-direction">
+				<img src="../../../img/flex-direction1.svg" alt="flex-direction">
 				<p>这个个属性定义了flex容器下子元素布局的主轴参考线，它是容器的属性，表明子元素或水平或垂直轴线上排列。</p>
 				<pre rel="CSS"><code class="language-css">.container {
 	flex-direction: row | row-reverse | column
@@ -164,7 +165,7 @@
 
 			<div>
 				<h4>flex-wrap</h4>
-				<img src="../../img/flex-wrap.svg" alt="是否可打断">
+				<img src="../../../img/flex-wrap.svg" alt="是否可打断">
 	<pre rel="CSS" class="language-css"><code class="language-css">.container {
 	flex-wrap: nowrap | wrap | wrap-reverse;
 	}
@@ -189,7 +190,7 @@
 
 			<div>
 				<h4>justify-content</h4>
-				<img src="../../img/justify-content.svg" alt="justify-content">
+				<img src="../../../img/justify-content.svg" alt="justify-content">
 				<p>定义主轴线上子元素的对齐，它表现为对轴线上未充分利用的利用，说起来好像很绕口，但是试试例子就能明白它</p>
 	<pre rel="CSS"><code class="language-css">.container {
 	justify-content: flex-start | flex-end
@@ -205,7 +206,7 @@
 
 			<div>
 				<h4>align-items</h4>
-				<img src="../../img/align-items.svg" alt="align-items">
+				<img src="../../../img/align-items.svg" alt="align-items">
 				<p>当前主轴线的交叉线方向上的排列方式，属性值跟justify-content类似，从上图我们能大致了解到它的表现。</p>
 	<pre rel="CSS"><code class="language-css">.container {
 	align-items: flex-start | flex-end|
@@ -222,7 +223,7 @@
 
 			<div>
 				<h4>align-content</h4>
-				<img src="../../img/align-content.svg" alt="align-content">
+				<img src="../../../img/align-content.svg" alt="align-content">
 				<p>这个属性值是容器属性中相对难理解一点的，容易很justify-content混淆，其实说明白了它很容易（至少我现在是这么觉得的），
 				我们和justify-content比较学习，justify-content强调或者说作用的对象是子元素本身之间的关系，是怎么利用轴线上的未利用
 				空间，而align-content主要是以轴线为单位，不考虑轴线上的元素，它需要和flex-flow: wrap配合使用,只有出现多行排列时，
@@ -250,7 +251,7 @@
 			<h2>元素属性</h2>
 			<div>
 				<h4>order</h4>
-				<img src="../../img/order-2.svg" alt="排序">
+				<img src="../../../img/order-2.svg" alt="排序">
 				<p>用于定义子元素页面轴线上出现的顺序，默认是按照HTML文档顺序出现，我们可以通过修改子元素本身的order属性，
 				在不改变源文件结构的前提下，改变某子元素出现的顺序，这个挺厉害呀！</p>
 				<pre rel="CSS">
@@ -262,7 +263,7 @@
 
 			<div>
 				<h4>flex-grow</h4>
-				<img src="../../img/flex-grow.svg" alt="flex-grow">
+				<img src="../../../img/flex-grow.svg" alt="flex-grow">
 				<p>此属性主要用于更改某子元素的大小，属性值为无单位数值，数值以比例的形式表达，有点权重的感觉，不过是空间的权重，提一点，
 				它不接受负值。</p>
 				<pre rel="CSS"><code class="language-css">.item {
@@ -289,7 +290,7 @@
 	}</code></pre>
 				<p>当它为0时，不考虑多余的未利用空间（<em>这还是一个疑惑，我等会要试试</em>,当设置为<em>auto</em>时，根据
 				<em>flex-grow</em>来分配空间。</p>
-				<img src="../../img/rel-vs-abs-flex.svg" class="img-responsive" alt="flex-basis">
+				<img src="../../../img/rel-vs-abs-flex.svg" class="img-responsive" alt="flex-basis">
 
 			</div>
 
@@ -308,7 +309,7 @@
 
 			<div>
 				<h4>align-self</h4>
-				<img src="../../img/align-self.svg" alt="align-self">
+				<img src="../../../img/align-self.svg" alt="align-self">
 				<p>这个值可以覆盖<em>align-items</em>,可以完全自主的定义某一个特定的子元素，也是很好玩的一个属性。关于flex布局
 				的相关知识介绍的超不多了，再提一句，<em>float</em>,<em>clear</em>,<em>vertical-algin</em>对flex-items没
 				有作用啦！</p>
@@ -325,12 +326,12 @@
 
 	<section>
 	<h2>
-		<a href="#对应部分" class="anchor">
+		<a href="" class="anchor">
 			<span class="fa fa-link"></span>
 			举个例子：</a>
 	</h2>
 	<p>正式开始之前我们先来简单了解一下，flex布局被当前主流浏览器支持的程度，下面放一张图，来子<a href="caniuse.com">CANIUSE</a></p>
-	<a href="http://caniuse.com/#search=flex"><img class="img-responsive" src="../../img/flex-layout-use.png" alt="浏览器支持程度"></a>
+	<a href="http://caniuse.com/#search=flex"><img class="img-responsive" src="../../../img/flex-layout-use.png" alt="浏览器支持程度"></a>
 	<p>我们在做前端开发的时候经常会遇到各种需要居中的情景，就flex布局而言，最简单的例子就是来个居中的时间，称之为完美居中。</p>
 	<pre rel="CSS"><code class="language-css">.parent {
 	display: flex;
@@ -431,7 +432,7 @@
 		<footer class="st-footer">
 				<div class="st-inner">
 					<span>&copy 2015 by</span>
-					<a href="www.tabgre.com" title="Tab">Tab gre</a>
+					<a href="http://www.tabgre.com" title="Tab">Tab gre</a>
 				</div>
 		</footer>
 		<!--footer finish-->
@@ -448,12 +449,10 @@
 
 
 
-		<script src="../../js/ei.js"></script>
-        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="../../js/plugins.js"></script>
-        <script src="../../js/main.js"></script>
-		<script src="../../js/prism.js"></script>
+		<script src="../../../js/ei.js"></script>
+        <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/main.js"></script>
+		<script src="../../../js/prism.js"></script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
