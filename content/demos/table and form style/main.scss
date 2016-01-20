@@ -1,0 +1,31 @@
+table {
+    margin: 0 auto;
+    border: 1px solid red;  //不会继承给cell
+    border-spacing: 0;       //消除border见的距离,但是两个border还是存在
+    border-collapse: collapse; //彻底消除cell's border间距
+    th, td {
+        border: 2px solid green; // double border
+        padding: 5px 15px;
+        border-radius: 5px;  //border-collapse可继承,失效
+    }
+    .hover:hover {
+        border-color: #00b3ee; //每个cell只能掌握自己的left,bottom
+        transform: scale(1.2);
+    }
+    tr:nth-of-type(odd):hover {
+        background-image: linear-gradient(lime, grey);
+    }
+}
+fieldset {
+    width: 60%;
+    margin: 0 auto;
+}
+.label {
+    display: inline-block;
+    width: 10em;
+    vertical-align: top;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: 900;
+    color: #0d71bb;
+}

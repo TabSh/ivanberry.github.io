@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="index.css">
+	<title>css style</title>
+	<link rel="stylesheet" href="../../../css/styles/monokai-sublime.css"></link>
+	<script src="../../../js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<style type="text/css">
+		#demo {
+			font-size: 10px; 	/*first css rule */ 
+		}
+		p {
+			border: 1px solid green;  /*second one*/
+		}
+	</style>
+</head>
+<body>
+<div id="demo" style="color: red;">
+	<p>how to accese of doument's css!</p>
+</div>
+<pre><code class="css">
+	p {
+	color: red;
+	}
+</code></pre>
+<!-- inline style(style attribute),style,link, three types including all. -->
+<script>
+// document.addEventListener('DOMContentLoaded', function () {
+//   var cssExtenal = document.styleSheets[0];
+//   console.log(cssExtenal.cssRules[0].cssText);
+// }, false);
+/*1,to get the inline style, this maybe the most easy one*/
+var cssInline = document.getElementById('demo').style;
+var cssInText = cssInline.cssText, cssColor = cssInline.color;
+console.log(cssInText, cssColor);
+
+/*2.a to get the style in head*/
+var cssInHeada = document.getElementById('demo');
+// using the computed css of inline
+var cssHeadText = getComputedStyle(cssInHeada, null);
+console.log(cssHeadText);
+
+// 2.b to get the style directly
+var cssInHeadb = document.getElementsByTagName('style')[0];
+console.log(cssInHeadb.textContent);
+
+// 2.c or like this
+var cssInHeadc = document.styleSheets[1];
+console.log(cssInHeadc.cssRules[0].cssText); //per rule
+
+/*3, but I cant get the extenal style*/
+var cssExtenal = document.styleSheets[0];
+console.log(cssExtenal.cssRules[0].cssText);
+</script>
+</body>
+
+</html>
