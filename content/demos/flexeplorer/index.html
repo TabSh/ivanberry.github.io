@@ -11,12 +11,13 @@
 	<style>
 		.flex-container {
 			display: flex;
-			flex-flow: row wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
 
 		}
 		.flex-item div {
-			justify-content: space-around;
-			flex: 1 auto;
+			flex: 0 1 auto;
 		}
 
 
@@ -24,6 +25,7 @@
 </head>
 <body>
 <main class="main">
+
 	<aside id="sideBar" class="sideBar flex">
 		<hgroup class="hgroup flex">
 		<a href="http://tabgre.com/flexeplorer.com/index.html">Flexeplorer</a> <!--href should be fix after all finish-->
@@ -92,7 +94,7 @@
 
 
 
-	
+
 	</aside>
 	<!--aside ends here-->
 <figure id="demo" class="flex-container demo" style="font-size: 12px;font-weight: 900;">
@@ -113,11 +115,13 @@
 	</div>
 </footer>
 <script src="js/custom.js"></script>
+<script src="js/custom1.js"></script>
 <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.1.7/semantic.min.js"></script>
 <script >
 	var el = document.querySelector('footer code.language-css'),
-	cssStyle = document.styleSheets[4].cssRules,elCssRules = []; 
+	    cssStyle = document.styleSheets[4].cssRules,
+        elCssRules = [];
 
 	function getStyle() {
 

@@ -52,13 +52,13 @@ toggle.addEventListener('click', sideBarToggle, false);  //event delegation 默�
 //add new element(divs) to the page with DOM manipulation
 
 var position = document.getElementById('demo');
-var spanStrings = 'fsfsjl  fsjfls sfja2fspjfd 23wf jfsjhsF lsfhlqFj';
+var randomStrings = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at autem commodi excepturi, facilis, fuga inventore magni mollitia nisi, nobis nostrum possimus praesentium quidem. Asperiores excepturi impedit labore quia velit.';
 function addDivs() {
     var newDiv = document.createElement('div');
     newDiv.className = 'flex-item'
     var newSpan = document.createElement('span');
     newSpan.contentEditable = true;
-    var spanString = spanStrings.slice(Math.floor(Math.random()*10)+1,40); //需要更好的方法产生随机数字，截取字符
+    var spanString = randomStrings.slice(Math.floor(Math.random()*10)+1,40); //需要更好的方法产生随机数字，截取字符
     var newText = document.createTextNode(spanString);
     newSpan.appendChild(newText);
     newDiv.appendChild(newSpan);
@@ -115,7 +115,7 @@ function elDirectionChange () {
 }
 
 //selectionOption.addEventListener('change', elDirectionChange, false);
-selectionOption.onchange = elDirectionChange;
+//selectionOption.onchange = elDirectionChange;
 
 //change the attr 'flex-wrap'
 
@@ -126,7 +126,7 @@ function elWrapChange () {
     elDirection.style.flexWrap = usrOption;
 }
 
-selctionWrap.onchange = elWrapChange;
+//selctionWrap.onchange = elWrapChange;
 
 //change the attr 'justify-content'
 
@@ -137,7 +137,7 @@ function elJustifyChange () {
     elDirection.style.justifyContent = usrOption;
 }
 
-selectionJustify.onchange = elJustifyChange;
+//selectionJustify.onchange = elJustifyChange;
 
 
 
