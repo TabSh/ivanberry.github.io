@@ -1,0 +1,120 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+header {
+  background-color: #2fb9ef;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 2px 2px  20px #2fb9ef; }
+  header .header-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+    header .header-body .ui.card, header .header-body .card span {
+      width: 20rem;
+      text-align: left; }
+    header .header-body .card .image {
+      text-align: center;
+      background: #7BC3FC !important; }
+      header .header-body .card .image img {
+        width: 50%;
+        display: inline; }
+    header .header-body .pic {
+      border: 1px solid transparent;
+      border-radius: 50%; }
+    header .header-body .pic:hover {
+      transform: scale(-1, 1); }
+  header h1 {
+    font-size: 3rem;
+    text-shadow: 1px  1px  15px #000; }
+
+main {
+  margin: 4rem; }
+
+.row {
+  padding: 2rem 3rem; }
+  .row .unit {
+    box-shadow: -3px 3px 10px #9E9E9E;
+    border-radius: 5px;
+    color: #fff;
+    transition: transform .5s ease-in-out; }
+  .row .unit:hover {
+    transform: scale(1.1); }
+  .row .content {
+    flex: 1;
+    margin: 0 5px 0 5px; }
+  .row img {
+    width: 100%;
+    height: 4rem;
+    background-color: #1E88E5; }
+  .row a {
+    text-decoration: none;
+    color: inherit; }
+
+.unit1 {
+  background-color: #1E88E5; }
+
+.unit2 {
+  background-color: #AB47BC; }
+
+.unit3 {
+  background-color: #7E57C2; }
+
+.unit4 {
+  background-color: #009688; }
+
+.unit5 {
+  background-color: #43A047; }
+
+.unit6 {
+  background-color: #827717; }
+
+.unit7 {
+  background-color: #EF6C00; }
+
+.unit8 {
+  background-color: #616161; }
+
+main .content {
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center; }
+  main .content h2 {
+    margin-top: 1em; }
+
+.content-details {
+  padding: 20px 20px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 1s 0.5s cubic-bezier(0.69, 0.205, 0.2, 0.85); }
+
+.unit:hover .content-details {
+  opacity: 1; }
+.unit:hover h2 {
+  background-image: -webkit-linear-gradient(left, #64b3f4 20%, #FBC02D 40%, #E64A19 60%, #00E676 80%, #FF5252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+@keyframes round {
+  from {
+    -webkit-transform: rotate(0deg) scale(0.5);
+    left: 110%; }
+  50% {
+    -webkit-transform: rotate(-720deg) scale(0.5); }
+  to {
+    -webkit-transform: rotate(0deg) scale(1);
+    left: 0; } }
+#pic {
+  position: absolute;
+  left: 0;
+  animation: round 3s; }
+
+/*# sourceMappingURL=index.css.map */

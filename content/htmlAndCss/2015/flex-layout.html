@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tab的前端路</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../../fonts/blackjack_regular_macroman/stylesheet.css" type="text/css" />
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/normalize.css">
+		<link rel="stylesheet" href="../../../css/prism.css">
+		<link rel="stylesheet" href="../../../css/main-content.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<div class="st-header">
+			<header class="header">
+				<div class="top-logo">
+				<h1>Tab Gre</h1>
+				<span>Step forward forever</span>
+			</div>
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html">主页</a></li>
+						<li><a href="content/2015/work-env-setting.html">前端学习</a></li>
+						<li><a href="translation.html">译文参考</a></li>
+						<li><a href="contact.html">关于我</a></li>
+					</ul>
+				</nav>
+				<div class="st-header-right st-search">
+					<div class="st-search">
+				<form action="http://www.baidu.com" method="post" name="st-search">
+					<div class="st-input-wrap">
+					<input type="text" id="st-search" value="" placeholder="search on site">
+					<input type="submit" value="">
+					</div>
+				</form>
+					<span class="fa fa-search"></span>
+			</div>
+				<div class="share-icon">
+				<ul>
+					<li><a class="fa fa-github fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-linkedin-square fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-google-plus fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-envelope-o fa-lg " href="mailto:tabvim@gmail.com"></a></li>
+					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
+				</ul>
+			</div>
+                    </div>
+			</header>
+		</div>
+		<!-- head finished-->
+
+	<main id="main">
+	<nav class="main-content-nav">
+		<header>
+			<h4>本文中：</h4>
+			<h6>内容主题</h6>
+		</header>
+		<ul>
+			<li><a href="">这是文章主体的导航</a></li>
+			<li><a href="">试试看效果怎么样</a></li>
+			<li><a href="">再来一行看看</a></li>
+			<li><a href="">还来一行</a></li>
+		</ul>
+		<h6>分享</h6>
+		<ul class="main-content-share">
+			<li><span class="fa fa-google-plus fa-2x"></span></li>
+			<li><span class="fa fa-wechat fa-2x"></span></li>
+			<li><span class="fa fa-envelope fa-2x"></span></li>
+		</ul>
+	</nav>
+	<h1> Flexbox学习小指南</h1>
+	<blockquote>
+		<span>来源：</span>
+		<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-tricks</a>
+	</blockquote>
+
+	<blockquote>
+		 The flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.
+		<footer>W3C</footer>
+	</blockquote>
+	<p>和大家一起学习下Flexbox布局，W3C文档中有提到在CSS2.1中有四种布局模型：</p>
+	<ul>
+		<li>block layout</li>
+		<li>inline layout</li>
+		<li>table layout</li>
+		<li>position layout</li>
+	</ul>
+	<p>上面四种模型，我们这里不详细介绍，现在有新添了一个新的，我们接下来介绍：flex layout.个人理解flex在布局上能使以往我们很是为难
+	情况得以改善，而且实现也很容易，现实中Bootstrap也在一定程度上能帮到我们，但是flexout的实现非常简单。首先明确最重要一点,父级容器
+	添加<code>display: flex;</code>后，就改变它元素的行为，在容器有了一个横纵坐标系的参照，接下来，我会参照W3C标准文档，MDN文档和
+	天才CSS专家<a href="http://css-tricks.com">Chris Coyier</a>网站学习，它们的资料对问题的表述非常到位，所以我们直接借鉴啦！</p>
+	<figure>
+		<img class="img-responsive" src="http://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg" alt="参考系">
+		<figurecaption>容器参考系</figurecaption>
+	</figure>
+
+	<p>如上图，在容器添加flex属性后，容器参考系发生了变化，有了两根垂直相交的轴线，主轴和相交轴。正式学习之前就这个二维的坐标
+	必须说一下，以免后面学习的误会，自己本身现在还有误会，我们一起深入学习。</p>
+	<dl>
+		<dt>主轴，主轴空间</dt>
+		<dd>容器的主轴是元素排列的主要轴线，主轴线上的容器空间成为主轴空间。</dd>
+		<dt>主轴线尺寸,主轴线属性</dt>
+		<dd>规定子元素在主轴上所占的维度，是它的主要尺寸，根据主轴的不同，可以是子元素宽度或者高度。</dd>
+		<dt>主轴起点，主轴终点</dt>
+		<dd>轴线上的方向为从起点到终点扩展子元素</dd>
+	</dl>
+	<p>本来想把交叉轴同样列出来，但是这个时候我想到了做数学证明题时：同理可得。理解还这个最基本点后，我们再开始说道说道，基础知识</p>
+	<h2>
+		<a href="" class="anchor">
+			<span class="fa fa-link"></span>
+			基础知识</a>
+	</h2>
+	<section id="flexbox">
+
+		<!--左半边为容器属性-->
+		<div class="flexbox-half flex-parent">
+			<img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-container.svg" alt="父级元素属性">
+			<h2>父级属性（容器属性）</h2>
+			<div>
+				<h4>display</h4>
+				<img src="" alt="">
+				<p>这个属性值，添加在父级元素上，作用很明确，这也是flex布局的开始，而效果表现在它的直接子元素。</p>
+
+<pre rel="CSS"><code class="language-css">.container {
+         display: flex; /*or inline-flex*/
+        }
+</code></pre>
+            <p>关键属性，声明对象是容器元素，对容器元素本身没有任何影响，作用对象是它的直接子元素。</p>
+</div>
+
+				   <!--自定义代码块-->
+
+			<div>
+				<h4>flex-direction</h4>
+				<img src="../../../img/flex-direction1.svg" alt="flex-direction">
+				<p>这个个属性定义了flex容器下子元素布局的主轴参考线，它是容器的属性，表明子元素或水平或垂直轴线上排列。</p>
+				<pre rel="CSS"><code class="language-css">.container {
+	flex-direction: row | row-reverse | column
+	| column-reverse;
+	}</code></pre>
+				<ul>
+					<li>row:默认值，定义主轴为水平向，自左向右（ltr)。</li>
+					<li>row-reverse: 对本身为自左向右书写的文字，改变为相反的排列方向。</li>
+					<li>column: 更改主轴为竖直方向。</li>
+					<li>column-reverse: 如本身是自上而下，该为相反方向。</li>
+				</ul>
+				<p>这个属性值改变容器内子元素的排列方向，我们下面会集中举例，便于学习</p>
+
+			</div>
+
+			<div>
+				<h4>flex-wrap</h4>
+				<img src="../../../img/flex-wrap.svg" alt="是否可打断">
+	<pre rel="CSS" class="language-css"><code class="language-css">.container {
+	flex-wrap: nowrap | wrap | wrap-reverse;
+	}
+	</code></pre>
+				<ul>
+					<li>nowrap:默认值，单行显示</li>
+					<li>wrap: 多行显示,默认左至右</li>
+					<li>wrap-reverse: 多行显示,默认右至左</li>
+				</ul>
+				<p>容器内子元素在轴线上排列是否容许多行的出现，默认是单行显示，不允许断裂。充分利用行内的空间，大小随行内
+				空间的减少（增大）而减少（增大）。</p>
+			</div>
+
+			<div>
+				<h4>flex-flow</h4>
+				<img src="" alt="">
+				<p>flex-flow是flex-direction flex-wrap的缩写，定义了容器内的主轴线，默认值为row nowrap。</p>
+	<pre rel="CSS"><code class="language-css">.container {
+	flex-flow: <'flex-direction'> | <'flex-wrap'>;
+	}</code></pre>
+			</div>
+
+			<div>
+				<h4>justify-content</h4>
+				<img src="../../../img/justify-content.svg" alt="justify-content">
+				<p>定义主轴线上子元素的对齐，它表现为对轴线上未充分利用的利用，说起来好像很绕口，但是试试例子就能明白它</p>
+	<pre rel="CSS"><code class="language-css">.container {
+	justify-content: flex-start | flex-end
+	          space-between | space-around;
+	}</code></pre>
+				<ul>
+					<li>flex-stat: 默认值，在主轴线上从轴线起点开始向后排列</li>
+					<li>flex-end: 在主轴线上从轴线终点向前排列</li>
+					<li>space-between: 从轴线起点开始，子元素间均化利用未能利用的空白,第一个元素在轴线起点处，最后一个在轴线终点处，</li>
+					<li>space-around: 子元素前后（四周）均化利用未能利用的空白</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4>align-items</h4>
+				<img src="../../../img/align-items.svg" alt="align-items">
+				<p>当前主轴线的交叉线方向上的排列方式，属性值跟justify-content类似，从上图我们能大致了解到它的表现。</p>
+	<pre rel="CSS"><code class="language-css">.container {
+	align-items: flex-start | flex-end|
+	          center | baseline | stretch
+	}</code></pre>
+				<ul>
+					<li>flex-start: 主轴交叉线起点为起点排列</li>
+					<li>flex-end: 主轴交叉线终点为起点排列</li>
+					<li>center: 交叉线上居中</li>
+					<li>baseline: 子元素基线对齐</li>
+					<li>strecth: 拉伸利用容器空间，默认值</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4>align-content</h4>
+				<img src="../../../img/align-content.svg" alt="align-content">
+				<p>这个属性值是容器属性中相对难理解一点的，容易很justify-content混淆，其实说明白了它很容易（至少我现在是这么觉得的），
+				我们和justify-content比较学习，justify-content强调或者说作用的对象是子元素本身之间的关系，是怎么利用轴线上的未利用
+				空间，而align-content主要是以轴线为单位，不考虑轴线上的元素，它需要和flex-flow: wrap配合使用,只有出现多行排列时，
+				这个属性值才有存在的意义，我们会在之后的具体例子中体会到。</p>
+				<pre rel="CSS"><code class="language-css">.container {
+				align-content: flex-start | flex-end |
+				               center | space-between |
+				               space-between | stretch
+				}</code></pre>
+				<ul>
+					<li>flex-start:lines 从容器开始端（为什么是端，而不在是点呢？）开始排列。</li>
+					<li>flex-end: lines从容器底端开始排列</li>
+					<li>center: lines居中排列</li>
+					<li>space-between: lines排列间距均话，第一行排容器开始端，末行排底端</li>
+					<li>space-around: lines四周都是间距</li>
+					<li>stretch: 拉伸占满</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!--右半边为元素属性-->
+		<div class="flexbox-half flex-child">
+			<img src="https://cdn.css-tricks.com/wp-content/uploads/2014/05/flex-items.svg" alt="元素属性">
+			<h2>元素属性</h2>
+			<div>
+				<h4>order</h4>
+				<img src="../../../img/order-2.svg" alt="排序">
+				<p>用于定义子元素页面轴线上出现的顺序，默认是按照HTML文档顺序出现，我们可以通过修改子元素本身的order属性，
+				在不改变源文件结构的前提下，改变某子元素出现的顺序，这个挺厉害呀！</p>
+				<pre rel="CSS">
+				<code class="language-css">.item {
+			order: &lt;integer&gt;;
+				     }</code></pre>
+
+			</div>
+
+			<div>
+				<h4>flex-grow</h4>
+				<img src="../../../img/flex-grow.svg" alt="flex-grow">
+				<p>此属性主要用于更改某子元素的大小，属性值为无单位数值，数值以比例的形式表达，有点权重的感觉，不过是空间的权重，提一点，
+				它不接受负值。</p>
+				<pre rel="CSS"><code class="language-css">.item {
+				flex-grow: &lt;number&gt;
+				}</code></pre>
+
+			</div>
+
+			<div>
+				<h4>flex-shrink</h4>
+				<p>定义子元素是否能被拉伸,负值无效</p>
+				<pre rel="CSS"><code class="language-css">.item {
+				flex-shrink: &lt;number&gt;
+				}</code></pre>
+
+			</div>
+
+			<div>
+				<h4>flex-basis</h4>
+				<p>这个属性值值得玩味，它定义了在重分配未利用空间前子元素默认大小，它可以是长度单位或者关键词（auto, content),当为关键词时，
+				默认大小就需要看子元素本身的宽，高属性,content好理解，根据内容控制。</p>
+	<pre rel="CSS"><code class="language-css">flex-basis: {
+	&lt;length&gt; | auto /*default*/ | content;
+	}</code></pre>
+				<p>当它为0时，不考虑多余的未利用空间（<em>这还是一个疑惑，我等会要试试</em>,当设置为<em>auto</em>时，根据
+				<em>flex-grow</em>来分配空间。</p>
+				<img src="../../../img/rel-vs-abs-flex.svg" class="img-responsive" alt="flex-basis">
+
+			</div>
+
+			<div>
+				<h4>flex</h4>
+				<p>flex是上面上个子元素属性值的简写，W3C推荐使用简写，简写好像很厉害的样子，可以仔细研究研究的。</p>
+	<pre rel="CSS"><code class="language-css">.item {
+	flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt; &lt;'flex-basis'&gt;];
+	}</code></pre>
+
+
+
+
+
+			</div>
+
+			<div>
+				<h4>align-self</h4>
+				<img src="../../../img/align-self.svg" alt="align-self">
+				<p>这个值可以覆盖<em>align-items</em>,可以完全自主的定义某一个特定的子元素，也是很好玩的一个属性。关于flex布局
+				的相关知识介绍的超不多了，再提一句，<em>float</em>,<em>clear</em>,<em>vertical-algin</em>对flex-items没
+				有作用啦！</p>
+
+
+
+
+			</div>
+
+
+		</div>
+
+	</section> <!-- flex layout ends here -->
+
+	<section>
+	<h2>
+		<a href="" class="anchor">
+			<span class="fa fa-link"></span>
+			举个例子：</a>
+	</h2>
+	<p>正式开始之前我们先来简单了解一下，flex布局被当前主流浏览器支持的程度，下面放一张图，来子<a href="caniuse.com">CANIUSE</a></p>
+	<a href="http://caniuse.com/#search=flex"><img class="img-responsive" src="../../../img/flex-layout-use.png" alt="浏览器支持程度"></a>
+	<p>我们在做前端开发的时候经常会遇到各种需要居中的情景，就flex布局而言，最简单的例子就是来个居中的时间，称之为完美居中。</p>
+	<pre rel="CSS"><code class="language-css">.parent {
+	display: flex;
+	height: 300px; /*or whatever want */
+	}
+
+	.child {
+	width: 100px;
+	heigth: 100px;
+	margin: auto; /* magic here!*/
+	}
+	</code></pre>
+	<p>上面的CSS，再结合一定的HTML文档，我们可以很完美的实现居中，传统方法有很多居中的方法，这个可以新做一个主题，认真讲解，我们暂时
+	不提，但是，总的来说，flex布局的出现，使得居中非常容易实现，看看上面的代码和下面的例子，脑海中闪过，我了个去！</p>
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+			<p data-height="347" data-theme-id="0" data-slug-hash="KVMgaG" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/KVMgaG/'>perfect centering</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		</div>
+	</div>
+	<p>是不是很神奇，在父级元素flex的基础上，对子元素简单来一个<code>margin: auto;</code>!Boom!居中啦，我了个去，真的居中啦。</p>
+	<p>少年，不要太兴奋，我们接着往下走走看，我们多来几个子元素，来6个试试下面的CSS申明。</p>
+	<pre rel="CSS"><code class="language-css">.parent {
+	display: flex; /*Magic starts here*/
+	flex-flow: row wrap; /* same as
+	                     /*flex-direction: row;
+						 /*flex-wrap: wrap;
+						 */
+    justify-content: space-around; /*define how did distibuted
+	                               /*the remaining space
+								   */
+	}
+
+	</code></pre>
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+			<p data-height="259" data-theme-id="0" data-slug-hash="XXKjVr" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/XXKjVr/'>XXKjVr</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		</div>
+	</div>
+
+	<p>我们来个实际点的应用，我们经常要做的，来个导航，要求简单：大屏时右上角展开，移动端单行重叠展开,想想想我们平常怎么做的，导航哟，不难
+	先来个<code>ul</code>,先去他的<code>list-item</code>,在把它的<code>li</code>来个<code>display: inline-block;</code>大致上是可以啦，接着就是
+    细节调整，调整下padding，调整下margin,我去，真是麻烦，这是像素级别的操作啊！</p>
+
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+			<p data-height="100" data-theme-id="0" data-slug-hash="qbNaJa" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/qbNaJa/'>easy navigantion with flex layout</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		</div>
+	</div>
+	<p>强烈建议上codepen试试看，我的网页宽度好像限制了它的宽度，不能呈现出右上角导航的情况，经过检查，可以出现，但是严重建议去codepen试试看。</p>
+	<p>我们之前提到了关于子元素一个非常好用的属性，就是在不改变HTML结构的同时，我们让子元素出现不同的顺序，应该蛮好玩的。</p>
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+
+
+
+		</div>
+	</div>
+
+    </section>
+
+	<p>个人对flex item的flex属性中的flex-basis还不是很懂，在翻看资料时，发现一个厉害的<a href="http://bennettfeely.com/flexplorer/">网站</a>，可以给你视觉上观察各属性值改变时的变化。参照这个网站，我自己也“抄袭”个，可以<a href="http://7xpzz2.com1.z0.glb.clouddn.com/index.html">看看</a></p>
+	<p>经过仔细翻阅W3C文档，并结合谷歌，对子元素的flex属性有点新的体会，这里更新一下，以免忘记</p>
+	<ul>
+	<li><a href="http://www.w3.org/TR/css-flexbox-1/#flexibility">W3C</a>推荐使用简写<code>flex</code>代替<code>flex-grow,flex-shrink, flex-basis</code>.</li>
+		<li>跟进上一条，flex默认值为0,1,auto，这和单独的默认值不同，单独是对应为1,1,auto.</li>
+		<li>flex-grow决定元素的主轴维度的增长能力.</li>
+		<li>flex-shrink决定元素的主轴维度的收缩能力.</li>
+		<li>flex-basis决定元素的主轴维度的大小,这个大小是指为重新分配容器未利用空间前的初始大小.
+		  <ul>
+			  <li>width: 和width属性值相同</li>
+			  <li>auto:由主轴尺寸值计算得之，若这个值本身也是auto，那么元素大小基于元素内容自动生成.</li>
+			  <li>赋值为0时必须加上长度单位.</li>
+		  </ul>
+		</li>
+		<li>当前两者赋值为0时，意味着说：我不要放大也不能收缩，由<code>flex-basis</code>决定我们的大小.</li>
+		<li>当给它们不同的值时，表明他们放大缩小的速度不同，值越大越块，增大的尺寸与<code>flex-basis</code>相关.</li>
+	</ul>
+	<p>常用<code>flex</code>值</p>
+	<ul>
+		<li><code>initial:</code> 等同于<code>flex: 0 1 auto;</code>,这个值就表明作用元素在主轴方向不会放大以占满未利用空间，但当空间不足时会缩小.</li>
+		<li><code>auto:</code>等同于<code>flex: 1 1 auto;</code>基于元素的尺寸，可缩可放，自动分配主轴方向所有未利用空间.</li>
+		<li><code>none:</code>等同于<code>flex: 0 0 auto;</code>同样基于元素尺寸，完全不能缩放.</li>
+				<li><code>&lt;positive-number&gt;</code>，等同于<code>flex: &lt;positive-number&gt; 1 0%;</code>,按确定比列（占所有flex-grow的比重）分配主轴未利用空间.</li>
+	</ul>
+
+	<p>最后来一个视觉冲击强烈一点的例子，好好学习一下，迎接flex布局的普及,这个布局也可用于一般网站的开发。</p>
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+			<p data-height="324" data-theme-id="0" data-slug-hash="OMXRYw" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/OMXRYw/'>layout</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		</div>
+	</div>
+
+
+	</main>
+
+
+
+		<footer class="st-footer">
+				<div class="st-inner">
+					<span>&copy 2015 by</span>
+					<a href="http://www.tabgre.com" title="Tab">Tab gre</a>
+				</div>
+		</footer>
+		<!--footer finish-->
+
+		<script>
+        console.log('%cTo Be wanted', 'font-size:40px;color:#000;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
+		console.log("%c如何才能完美呈现一张网页？", 'font-size: 20px;color: #43daf2; text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9');
+		console.log("一位野生新人，需要如何的毅力才能在前端路上走下去");
+		console.log("%c把我加到你的团队吧！","font-size: 30px; color: blue;");
+
+		</script>
+
+
+
+
+
+		<script src="../../../js/ei.js"></script>
+        <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/main.js"></script>
+		<script src="../../../js/prism.js"></script>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-69949710-1','auto');ga('send','pageview');
+       </script>
+
+    </body>
+</html>

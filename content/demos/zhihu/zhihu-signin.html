@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="zhihu-signin.css">
+    <link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../css/prism.css">
+    <script src="../../../js/prism.js"></script>
+    <!--<link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+    <title>Signin</title>
+    <style type="text/css">
+    	main button {
+    		background-color: lime;
+    		color: white;
+    		font-size: larger;
+    	}
+
+
+    </style>
+</head>
+<body>
+<main>
+    <img src="logo.c1968f51.png" alt="知乎">
+    <h3>与世界分享你的知识,经验和见解</h3>
+    <div class="upAndIn">
+    <span id="signup" >注册</span>
+    <span id="signin">登录</span>
+    </div>
+    <form action="" name="1" id="in" class="active" >
+	 <label class="label"><input type="text" placeholder="姓名"></label>
+	 <label class="label"><input type="text" placeholder="手机号(仅支持中国大陆)"></label>
+	 <label class="label"><input type="password" placeholder="密码(不少与6位)"></label>
+	 <label class="label"><input type="text" placeholder="验证码"></label>
+	 <button type="submit">注册知乎</button>
+    </form>
+    <form action="" name="2" id="up">
+	 <label class="label"><input type="text" placeholder="手机或邮箱"></label>
+	 <label class="label"><input type="password" placeholder="密码"></label>
+	 <label class="label"><input type="text" placeholder="验证码"></label>
+	 <button id="css" type="submit">登录</button>
+    </form>
+    <div class="social">
+	 <span>社交帐号登录</span>
+	 <div class="social">
+	 <i class="fa fa-github"></i>
+	 <i class="fa fa-wechat"></i>
+	 <i class="fa fa-qq"></i>
+	 </div>
+
+    </div>
+    <!-- this is a comment for test -->
+        <div id="css-style">
+	<pre rel="CSS" class="language-css"><code class="language-css">
+		</code></pre>
+	</div>
+</main>
+
+
+<script>
+var cssStyle = document.querySelector('#css-style code');
+var cssStyleOrigin = document.styleSheets[3].cssRules[0].cssText;
+//get styleSheet cssText in head
+
+cssStyle.textContent = cssStyleOrigin;
+//assign the cssText to pre>code.textContent
+
+
+
+</script>
+</body>
+</html>

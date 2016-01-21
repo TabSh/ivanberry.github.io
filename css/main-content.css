@@ -12,7 +12,7 @@ main ul, main ol {
 	padding-left: 3em;
 }
 main ul ul {
-	padding-top 0;
+	padding-top:0;
 	margin-top: 0;
 }
 
@@ -42,7 +42,7 @@ main ul ul {
 }
 .main-content-nav h6 {
 	padding-left: 5px;
-	
+
 }
 .main-content-nav ul {
 	margin-top: 1em;
@@ -69,7 +69,7 @@ main ul ul {
 }
 .main-content-share span:hover {
 	color: rgb(45, 179,74);
-	
+
 }
  blockquote {
 	border:1px solid silver ;
@@ -148,7 +148,7 @@ h4 {
 	margin-top: 1em;
 	max-width: 400px;
 }
-table, h2, h3, ul, ol {
+#main h2,#main h2,#main h3, #main ul,#main ol {
 	margin-top: 1.5em;         /*add top margin*/
 }
 .table th, .table td {
@@ -174,11 +174,14 @@ table, h2, h3, ul, ol {
 	justify-content: space-between;
 }
 #flexbox .flex-child {
-	
+
 	/*flexbox's flex-child*/
-} 
+}
 #reference {
 	list-style: circle;
+}
+.codepen-eg {
+	max-width: 100%;
 }
 
 pre {
@@ -219,6 +222,9 @@ pre code {
 	margin-left: 10px;
 	/*border-left: 1px solid red;*/
 }
+.main-content-nav {
+    opacity: 1;
+}
 /*代码快格式化输出,有点问题下端代码两端比代码名称头多了1px的border*/
 
 /*.flex {
@@ -235,7 +241,7 @@ pre code {
 /*media query @ screen min widht 1080px*/
 @media screen and (min-width: 1080px){
 body {
-	background: url(../img/main-content-bg.png);
+	background-color: #E0E0E0;
 }
 main {
 	max-width:  1080px;
@@ -255,22 +261,23 @@ main {
 	background-size: 60%;
 	height: 400px;
 }
-.codepen-eg {
-	max-width: 100%;
-}
+
 .main-content-nav {
 	background-color: white;
 	position: fixed;
 	top: 280px;
 	right: 10px;
 	z-index: 1000;
+    opacity: 0;
 
 }
-//页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体
+/*页面内容的导航栏，还需要更改大屏特性，暂时还会遮掩文章本体*/
 
 #flexbox {
 	flex-direction: row;
-	width: 48%;
+}
+#flexbox .flexbox-half {
+    width: 48%;
 }
 #flexbox .flex-parent {
 	margin-right: 20px;

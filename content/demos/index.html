@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DEMOS</title>
+</head>
+<style>
+	#demos {
+		font-size: 16px;
+		max-width: 60%;
+		margin: 0 auto;
+		text-align: center;
+	
+	}
+	 #demos h2 {
+	 	font-size: 2rem;
+	 }
+	 a {
+	 	text-decoration: none;
+	 	color: #fff;
+	 	
+	 }
+	 #demos ul {
+	 	margin: 0 auto;
+	 	padding: 0;
+	 	font-size: 1.2rem;
+	 	max-width: 30%;
+	 	border-bottom: none;
+	 	border-radius: 10px;
+	 	list-style-type: none;
+	 }
+	 li {
+	 	padding: 5px 15px;
+	 	border-bottom: 2px solid #BBDEFB;
+	 	line-height: 35px;
+	 }
+	 li:first-child {
+	 	border-top-left-radius: 10px;
+	 	border-top-right-radius: 10px;
+	 }
+	 li:last-child{
+	 	border-bottom-right-radius: 10px;
+	 	border-bottom-left-radius: 10px;
+	 }
+	 li:hover {
+	 	animation: flip 3s;
+	 }
+	 li:nth-child(odd) {
+	 	background-color: #EF5350;
+	 }
+	 li:nth-child(even) {
+	 	background-color: #2196F3;
+	 }
+	 @keyframes flip {
+	 	from {
+	 		transform: rotateZ(0deg) scale(1.1);
+	 	}
+	 	50% {
+	 		transform: rotateZ(360deg) scale(.5);
+	 	}
+	 	to {
+	 		transform: scale(1);
+	 	}
+	 }
+</style>
+<body>
+<div id="demos">
+<h2>Demos</h2>
+<p>前端开发的前期学习,要熟练掌握HTML标记,最好的方法就是大量的练习,来个简单的页面,展示所有的练习,大的小的,各种各样的!</p>
+<ul>
+	<li><a href="flexeplorer/index.html">Live Flexbox</a></li>
+	<li><a href="#">Demo2</a></li>
+	<li><a href="#">Demo3</a></li>
+	<li><a href="#">Demo3</a></li>
+	<li><a href="#">Demo3</a></li>
+	<li><a href="#">Demo3</a></li>
+	<li><a href="#">Demo3</a></li>
+	<li><a href="#">Demo3</a></li>
+</ul>
+
+	
+</div>
+</body>
+</html>

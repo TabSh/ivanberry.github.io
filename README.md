@@ -29,11 +29,11 @@
 + [x] 为模板增加了一个主体文章的导航，设计为手机端，为大屏添加特定的基础样式，需要细化。
 + [x] 完善文章主题的样式细节
 + [x] 16号任务“位置”文章的完成
-+ [ ] “居中大戏”文章的完成
++ [x] “居中大戏”文章的完成
 + [ ] “前端学习”入口需合理化
 
 ## 2015-12-28-2016-1-10
-+ [ ] “居中大戏”完成
++ [x] “居中大戏”完成
 + [x] 主页headder部分更改布局方式，采用flexbox布局
 
         0. 可用方案：
@@ -48,3 +48,80 @@
 
 ## 2016-1-5
 + [ ] 修改内容页面导航索引问题（修改对应的CSS文件，媒体查询设置不正确，以BS的媒体规格为参考）
++ [x] “居中大戏”今天必须完成 (1-7)
+
+## 2016-1-15
+![文件结构](./img/fileStructure.png)
+
+
+##2016-1-17
+
++ 更改原代码高亮方法,采用highlight.js
++ 更新demos,多个demo生成中!
++ 更新flexeplorer中"获取样式的方法",并因此得到副产品"如何获取样式".
++ 更新如何使得代码区随同变化的方法.
+
+## 2016-1-21
+
+学习使用科学规范的开发流程
+
++ git分支
+	+ 永久分支
+		+ master branch
+		+ develop branch
+	+ 临时性分支
+		+ feature branch
+		+ release branch
+		+ hotbug branch
++ 使用规范
+
+master(项目管理者)-->develop(开发分支)-->feature(实际开发分支)
+
+feature-\*(特性开发)-->develop-->删除对应分支-->another feature-\*
+
+	//项目管理者原仓库建立,初始化master,develop分支
+	1,本地建立
+	~: mkdir git-demo && cd git-demo && git init && git checkout -b develop
+	2,推送至github或者git本地服务器
+	~: git push origin master
+	~: git checkout develop && git push origin develop
+
+	//开发过程 fork to github (github上点击fork)
+
+	//克隆至本地
+	~: git clone .git
+
+	//创建个人develop分支,并切换
+	~: git check -b develop
+
+	//创建feature-*分支
+	~: git check -b feature-*
+
+	//内容更新
+	~: touch app.html
+
+	//提交更新至feature0-*分支
+	~: git add . && git commit -m "add * feature"
+
+	//切换会develop分支
+	~: git checkout develop
+
+	//合并特性分支
+	~: git merge feature-*
+
+	//删除特性分支
+	~: git branch -d feature-*
+
+	//推送本地develop分支至源develop分支
+	~: git push origin develop
+
+	//功能需求开发后,向项目管理提起pull request,github上有个很大绿色按钮
+
+	//管理员操作,看到pull request,这一块没有试验过,要和朋友互相试试看.
+
+![源仓库](img/centr-decentr@2x.png)
+![main-branch](img/main-branches@2x.png)
+![fb](img/fb@2x.png)
+![git-model](img/git-model@2x.png)
+
+这几张图真是有点吓人,是对于初级开发者多练习几次应该会有所得,加油学习, 对于企业中的git管理,商业代码不适合发布到网络,可自建本地服务器,具体参考[廖雪峰博客](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000).

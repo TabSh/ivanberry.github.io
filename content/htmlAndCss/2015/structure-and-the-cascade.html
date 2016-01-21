@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tab的前端路</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/normalize.css">
+		<link rel="stylesheet" href="../../../css/main-content.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<div class="st-header">
+			<header class="header">
+				<div class="top-logo">
+				<h1>Tab Gre</h1>
+				<span>Step forward forever</span>
+			</div>
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html">主页</a></li>
+						<li><a href="content/2015/work-env-setting.html">前端学习</a></li>
+						<li><a href="translation.html">译文参考</a></li>
+						<li><a href="contact.html">关于我</a></li>
+					</ul>
+				</nav>
+				<div class="st-header-right st-search">
+					<div class="st-search">
+				<form action="http://www.baidu.com" method="post" name="st-search">
+					<div class="st-input-wrap">
+					<input type="text" id="st-search" value="" placeholder="search on site">
+					<input type="submit" value="">
+					</div>
+				</form>
+					<span class="fa fa-search"></span>
+			</div>
+				<div class="share-icon">
+				<ul>
+					<li><a class="fa fa-github fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-linkedin-square fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-google-plus fa-lg " href="https://github.com/ivanberry"></a></li>
+					<li><a class="fa fa-envelope-o fa-lg " href="mailto:tabvim@gmail.com"></a></li>
+					<li><a class="fa fa-wechat fa-lg" href=""></a></li>
+				</ul>
+			</div>
+                    </div>
+			</header>
+		</div>
+		<!-- head finished-->
+
+	<main id="main">
+	<h1 class="content-head"> Sturtrue and the Cascade</h1>
+	<blockquote>
+		In CSS, more than one style sheet can simultaneously influence a the presentation of a document and rules from these style sheets may overlap in scope (e.g., two rules that apply to the same element specify a font size). CSS resolves these conflicts by assigning a weight to each style rule and when several rules apply, choosing the one with the greatest weight. This is known as the cascade .
+		<footer>W3C</footer>
+	</blockquote>
+	<p>两个点对网页样式有重要影响，我们对每一个分开来讲解，先来个简单的大纲看看，打个底,这大纲也太
+	简单了，看官将就着看。</p>
+	<ol>
+		<li>优先级</li>
+		<li>层叠</li>
+	</ol>
+	<h3>
+		<a href="" class="anchor">
+			<span class="fa fa-link"></span>
+			优先级</a>
+	</h3>
+	<p>优先级是在写CSS时，经常要处理的事情，在很多时候，我们需要改某个元素的样式时，可能会在写尝试各种不同的
+	语句后，我们期望的变化没有发生，这个时候可能会考虑到，我现在处理的选择器优先级不够，或者说权重不够。关于
+	优先级，有几条简单的规则，我们先说明下，再在例子中体会。</p>
+	<p>选择器的优先决定与它本身组分，并用4个数位计数，具体如下：</p>
+	<ul>
+		<li>每inline style计为1,0,0,0</li>
+		<li>每一个ID属性值0,1,0,0</li>
+		<li>每一个Class属性，属性选择和伪类选择加0,0,1,0</li>
+		<li>每一个元素和伪类元素加0,0,0,1</li>
+		<li>*(全局属性)0,0,0,0</li>
+		<li>+ 等组合不计</li>
+		<li>继承样式无优先值</li>
+	</ul>
+	<p>看上去好像很是玄乎，但是借着几个简单的例子就能很清楚的明白是怎么个意思了。</p>
+	<pre>
+	<code>
+	h1 {color: red;} /*0,0,0,1*/
+	body h1 { color: green;} /*0,0,0,2*/
+	h2.pp {color: red;} /*0,0,1,1*/
+	h2#para {color: green;} /*0,1,0,1*/
+	</code>
+	</pre>
+	<p>对比例子和上面的几条规则，我们很容易理解这样的计数，也很好判断哪个优先级更高，
+	从而能判断出元素会呈现出哪个声明的样式，CSS作者也就能从这一点来判断和改写语法，来
+	达到预想的效果。</p>
+	<div class="codepen-eg">
+		<div class="codepen-inner">
+			<p data-height="168" data-theme-id="0" data-slug-hash="vLLrjw" data-default-tab="result" data-user="ivanberry" class='codepen'>See the Pen <a href='http://codepen.io/ivanberry/pen/vLLrjw/'>优先级</a> by Tab (<a href='http://codepen.io/ivanberry'>@ivanberry</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+		</div>
+	</div>
+	<p>Pen的配色没有什么美感可言，纯粹是为了更好的展示例子，使说明更加清晰，如上，我们有几种不同的样式申明
+	也分别标记了他们的优先值，对应起规则来，还是很简单的吧，其中要说明一下第7点，继承的属性没有优先值是
+	什么意思？从上我们知道全局选择器(*)优先值为 <code>0,0,0,0</code>,而这个继承的属性的优先干脆是无了，它们两
+	从例子上看，无是最低级的，没有什么用。</p>
+	<p>从例子上看，HTML中的<code>&lt;em&gt;</code>看上去继承了很多的color值，然而并没有什么用，因为继承的属性
+	它的优先值为无，而全局属性的优先值是0,0,0,0，后者更好，所以字体颜色就是对应与全局属性的值，很是当然的。
+    上面的学习，基本上对各类选择器的优先值有了一定的认识，调试过程中可能会出现没有得到预期样式的问题，这可以
+	成为一个思考的出发点。关于继承还有一点需要说明：并不是所有的属性都能继承，如外边距，内边距，背景色和边框等。</p>
+	<p>例子中有提到<code>!important</code>,当有这玩意的时候，本身仅仅只有0,0,0,1的申明却其作用了，这是什么鬼？
+	其实这也是样式中的一条区别去优先值规则的规则：权重。上面说的那些没有添加<code>!important</code>都是小孩闹着
+	玩，一旦有那条申明有了important标识，其他没有的全得靠边站着，这里可以把它们区分为important类和nonimportant类。</p>
+	<h3>
+		<a href="" class="anchor">
+			<span class="fa fa-link"></span>
+			层叠</a>
+	</h3>
+	<p>说完了优先值，我们发现都是不同的选择器有不同的声明（不同的颜色等),但是一旦是相同的申明，我们怎么判断呢？那就得请来CSS大神了，层叠，英文名CSS,Cascade Style Sheets国内普遍翻译为层叠样式表，浅显的理解层叠就是一层一层的覆盖，后出现的要比之前出现的厉害，
+	从样式的实现原理上将可以理解为：</p>
+	<ol>
+		<li>找：找到包含特定元素的所有申明</li>
+		<li>排：一排权重，二排来源,三排优先值,四排申明顺序</li>
+	</ol>
+	<p>我们来几个例子，以便理解</p>
+	<h4>权重和来源</h4>
+	<p>关于权重就是说<code>!important</code>比nonimportant的厉害，而对于来源来说，一般有三类：作者，读者和UA。其实
+	很少有用户会自己更改某一网页的某些属性，但是也不得不考虑，这三类中还是先考虑权重，权重之中考虑来源</p>
+	<ol>
+		<li>读者高权重申明</li>
+		<li>作者高权重申明</li>
+		<li>作者非高权重申明</li>
+		<li>读者非高权重申明</li>
+		<li>UA(一般为浏览器)申明</li>
+	</ol>
+	<p>一般写CSS时，一般只会考虑前4,因为谁都是可以覆盖，重写UA的申明的。</p>
+
+	<h4>优先值</h4>
+	<p>文章开端详细说明了优先值的比较，不罗嗦。</p>
+	<h4>申明顺序</h4>
+	<p>在其他条件之外，如果出现了两条一模一样的申明，这个时候就是CSS本质显作用了，何谓层叠，后来的比先来的厉害，
+	就样式申明而言，后申明的可以覆盖先申明的。最后来一个图表明层叠样式表的实现，来个国外大神的关于CSS的说明。</p>
+	<div class="media">
+	<div class="main-content-img img-inner">
+		<img src="../../../img/cascade.png" alt="层叠图">
+
+	</div>
+
+	<video width=“800” controls>
+		<source src="http://7xp86i.com1.z0.glb.clouddn.com/cascade.mp4" type="video/mp4">
+		你的浏览器不支持HTML5 video标记，请更新至最新版本，推荐使用Chrome.
+	</video>
+
+    </div>
+
+	<ul id="reference">
+		<caption>Reference</caption>
+		<!--refrence goes here-->
+		<li><a href="http://www.w3.org/TR/WD-CSS2-971104/cascade.html">Cascade Style Sheets</a></li>
+	</ul>
+	</main> <!-- main content finish here-->
+		<!--default main content begining-->
+
+
+		<footer class="st-footer">
+				<div class="st-inner">
+					<span>&copy 2015 by</span>
+					<a href="http://www.tabgre.com" title="Tab">Tab gre</a>
+				</div>
+		</footer>
+		<!--footer finish-->
+
+
+        <script src="../../../js/ei.js"></script>
+        <script src="../../../js/plugins.js"></script>
+        <script src="../../../js/main.js"></script>
+
+        <script>
+           (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-69949710-1','auto');ga('send','pageview');
+       </script>
+ <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+    </body>
+</html>
